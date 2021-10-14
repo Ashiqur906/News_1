@@ -1,0 +1,392 @@
+
+   /*top_part start*/
+   .P_part{
+    background-color: #334f89;
+    color: white;
+    padding: 15px;
+   }
+   .P_part1{
+    background-color: #334f89;
+    color: white;
+   }
+   .homeicon{
+    font-size: 20px;
+   }
+   .logop{
+    background-color: #4267b2;
+    color: white;
+    padding: 10px;
+    height: auto;
+    margin-top: 102px;
+    margin-bottom: 25px;
+
+   }
+   .social_icon{
+    float: right;
+    width: 35px !important;
+    height: 25px !important;
+    margin-left: 10px;
+    margin-bottom: 17px;
+
+   }
+   .bgnav{
+    background-color:#334f89;
+    margin-left: -53px;
+    
+   }
+   .bgnav li a{
+    color: white;
+    padding: 2px;
+    padding: 0px 0px 0px 23px;
+   }
+   /*top_part end*/
+
+  /*slide_bar start*/
+   .slide_text_1{
+    background-color: #e1e1e170;
+    margin-bottom: 10px;
+    padding-top: 7px;
+   }
+  .slide_text h3{
+    font-size: 11px;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    color: rgb(2 0 0);
+    line-height: 1.2;
+    flex: 1 1 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: SolaimanLipi,AdorshoLipi,voice;
+    font-weight: 400;
+    line-height: 1.0rem;
+    letter-spacing: .0071428571em;
+    margin-left: -14px;
+  }
+  .slide_text p{
+    color: #6060608f;
+    font-size: 11px;
+    white-space: normal;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    line-height: 1.2;
+    flex: 1 1 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: SolaimanLipi,AdorshoLipi,voice;
+    font-weight: 400;
+    line-height: 1.0rem;
+    letter-spacing: .0071428571em;
+    margin-left: -14px;
+  }
+  /*slide_bar start*/
+
+  /*footer start*/
+   .copy_footer{
+    margin-left: 327px;
+    margin-bottom: 26px;
+        margin-top: 31px;
+  }
+  .foot_menu{
+    margin-top: 20px;
+    border-left: 2px solid white;
+  }
+  .foot_menu ul li a{
+    color: white;
+  }
+  .foot_part2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-left: 2px solid white;
+  }
+  .foot_part2 p a{
+  
+     color: white;
+     margin-bottom: 0px;
+  }
+  .foot_last{
+    margin-top: 20px;
+    border-left: 2px solid white;
+  }
+  .foot_last ul li a{
+    color: white;
+  }
+.foot_last ul{
+
+  list-style-type: none;
+}
+   /*footer end*/
+  
+  /*start content part 1*/
+  .cont_1{
+    background-color: #ededed82;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 8px 1px darkgrey;
+  }
+
+  .h_c{
+    font-size: 2rem;
+    background: #e9e9e9b0;
+    padding: 2px;
+    border-bottom: 3px solid red;
+  }
+  .h_csl{
+    font-size: 2rem;
+    background: #e9e9e9b0;
+    padding: 2px;
+    border-bottom: 3px solid red;
+    margin-left: -15px;
+    margin-right: -16px;
+  }
+
+/*content part বিনোদন start */
+.cont_2{
+    background-color: #edededd1;
+    padding: 8px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 8px 1px darkgrey;
+
+  }
+  .h_c4{
+    white-space: normal;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    color: rgba(0,0,0,.6);
+    line-height: 1.2;
+    flex: 1 1 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: SolaimanLipi,AdorshoLipi,voice;
+    padding-top: 10px;
+    font-weight: 400;
+    line-height: 2.375rem;
+    letter-spacing: .0071428571em;
+    font: bold; 
+    font-size: 20px; 
+    color: #060000; 
+    border-bottom: 2px solid red;
+  }
+  .ptext{
+    white-space: normal;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    color: rgba(0,0,0,.6);
+    line-height: 1.2;
+    font-size: .875rem;
+    flex: 1 1 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: SolaimanLipi,AdorshoLipi,voice;
+    padding-top: 10px;
+    font-weight: 400;
+    line-height: 1.375rem;
+    letter-spacing: .0071428571em;
+  }
+
+  .hov_b{
+       transition: 1s;
+  }
+  .hov_b:hover{
+        transform:scale(1.1);
+        z-index: 2;
+     }
+
+  .h_c6{
+    font: bold; 
+    font-size: 20px; 
+    color: white;
+    border-bottom: 2px solid red;
+
+     }
+/*content part বিনোদন end */
+
+/*part_6 start*/
+.part_6_ro{
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+.part_6{
+  margin-right: 5px;
+}
+.part_6_con{
+  width: 290px;
+  height: 213px;
+  margin-bottom: 23px;
+  display: flex;
+  transition: 1s;
+  background: round;
+
+}
+.part_6_con1{
+  width: 202px;
+  height: 187px;
+  margin-bottom: 23px;
+  display: flex;
+  transition: 1s;
+  background: round;
+
+}
+.part_6_con11{
+  width: 594px;
+  height: 400px;
+  background-image: cover;
+  display: flex;
+  background: round;
+}
+
+.test_p6{
+  margin-top: 224px;
+  padding: 19px;
+  background: #00000047;
+  color: white;
+}
+.test_spa{
+  color: white;
+  font-size: 15px;
+  padding-top: 5px;
+  white-space: normal;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  line-height: 1.2;
+  flex: 1 1 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: SolaimanLipi,AdorshoLipi,voice;
+  /* padding-top: 10px; */
+  font-weight: 400;
+  line-height: 1.375rem;
+  letter-spacing: .0071428571em;
+}
+
+.test2_p6{
+    margin-top: 88px;
+    padding: 0px 13px 0px 13px;
+    background: #00000047;
+    color: white;
+    font-size: 13px;
+    white-space: normal;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    line-height: 1.2;
+    flex: 1 1 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: SolaimanLipi,AdorshoLipi,voice;
+    /* padding-top: 10px; */
+    font-weight: 400;
+    line-height: 1.375rem;
+    letter-spacing: .0071428571em;
+}
+.test2_p6_first{
+    margin-top:  97px;
+    padding: 0px 8px 0px 8px;
+    background: #00000047;
+    color: white;
+    font-size: 11px;
+    white-space: normal;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    line-height: 1.2;
+    flex: 1 1 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: SolaimanLipi,AdorshoLipi,voice;
+    /* padding-top: 10px; */
+    font-weight: 400;
+    line-height: 1.0rem;
+    letter-spacing: .0071428571em;
+}
+
+.h_p6{
+    font: bold; 
+    font-size: 15px; 
+    color: white;
+    border-bottom: 2px solid red;
+    white-space: normal;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    line-height: 1.2;
+    flex: 1 1 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: SolaimanLipi,AdorshoLipi,voice;
+    padding-top: 10px;
+    font-weight: 400;
+    line-height: 2.375rem;
+    letter-spacing: .0071428571em;
+
+     }
+     .h_p6_first{
+      font-size: 12px;
+      color: white;
+      border-bottom: 2px solid red;
+      white-space: normal;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      line-height: 1.2;
+      flex: 1 1 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-family: SolaimanLipi,AdorshoLipi,voice;
+      padding-top: 10px;
+      font-weight: 400;
+      line-height: 1.375rem;
+      letter-spacing: .0071428571em;
+  
+       }
+
+  .part_6_con:hover{
+      transform:scale(1.1);
+      z-index: 2;
+     }
+
+/*part_6 end*/
+
+/*marquee start*/
+    .marquee {
+      height: 25px;
+      width: 420px;
+
+      overflow: hidden;
+      position: relative;
+    }
+
+    .marquee div {
+      display: block;
+      width: 200%;
+      height: 30px;
+
+      position: absolute;
+      overflow: hidden;
+
+      animation: marquee 5s linear infinite;
+    }
+
+    .marquee span {
+      float: left;
+      width: 50%;
+    }
+
+    @keyframes marquee {
+      0% { left: 0; }
+      100% { left: -100%; }
+    }
+
+    .ajnews{
+      color: white;
+      margin-right: -80px;
+    }
+    .but_m{
+      margin-right: -80px;
+    }
