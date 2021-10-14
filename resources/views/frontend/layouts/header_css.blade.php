@@ -5084,6 +5084,7 @@
    .P_part1{
     background-color: #334f89;
     color: white;
+    margin-top: 22px;
    }
    .homeicon{
     font-size: 20px;
@@ -5447,6 +5448,71 @@
 /*part_6 end*/
 
 /*marquee start*/
+/* New */
+.slide-marquee{
+    background: linear-gradient(45deg,transparent,#6e7687);
+    padding: 2px 5px;
+    overflow: hidden;
+    background-color: #2b509f;
+    width: 665px;
+ }
+     .ul-list{
+       list-style: none;
+
+     }
+     .li-list{
+       display: inline-block;
+       color: #fff;
+       margin-right: 10px;
+       font-family: SolaimanLipi,AdorshoLipi,voice;
+     }
+     .li-list a{
+        text-decoration: none;
+        font-family: SolaimanLipi,AdorshoLipi,voice;
+     }
+     .spot-anim {
+       transform: translateX(-100%);
+       will-change: transform;
+       animation-duration: 50s;
+       animation-timing-function: linear;
+       animation-iteration-count: infinite;
+       -webkit-animation-name: marquee;
+       -moz-animation: marquee;
+       -o-animation-name: marquee;
+       animation-name: marquee;
+        margin: 0 0;
+        width: max-content;
+     }
+     .alert-spinner {
+         width: 20px;
+         height: 20px;
+         display: inline-block;
+         margin-right: 12px;
+         position: relative;
+         vertical-align: middle;
+         margin-left: 5px;
+         margin-top: 2px;
+     }
+     .list-alert-spinner{
+        width: 13px;
+        height: 13px;
+        display: inline-block;
+        margin-right: 12px;
+        position: relative;
+        vertical-align: middle;
+        margin-left: 5px;
+        margin-top: 2px;
+     }
+     .double-bounce {
+         background: #fff;
+         width: 100%;
+         height: 100%;
+         border-radius: 50%;
+         position: absolute;
+         top: -2px;
+         left: 0;
+     }
+/* End */
     .marquee {
       height: 25px;
       width: 420px;

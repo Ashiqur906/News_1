@@ -66,21 +66,119 @@
                   ☰
                 </div>
               </div>
-            <div class="col-2">
-              <span class="ajnews">আজকের সংবাদ ></span>
-            </div>
-            <div class="col-8 marquee">
-              <div class="col-12">
-                <span>You spin me right round, baby. Like a record, baby.</span>
-                <span>You spin me right round, baby. Like a record, baby.</span>
+              <div class="col-2">
+                <span class="ajnews">আজকের সংবাদ ></span>
               </div>
+            {{-- marquee --}}
+            <div class="col-6">
+              {{-- New --}}
+              <div class="slide-marquee">
+                <ul class="ul-list spot-anim">
+                  <li class="li-list flex">
+                      <div class="list-alert-spinner">
+                          <div class="double-bounce"></div>
+                      </div>
+                    <a href=""> News number 1 </a>
+                   </li>
+                  <li class="li-list flex">
+                  <div class="list-alert-spinner">
+                    <div class="double-bounce">
+                    </div>
+                    বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক
+                  </div>
+                   <a href=""> News number 2 </a>
+                    </li>
+                  <li class="li-list flex">
+                  <div class="list-alert-spinner">
+                      <div class="double-bounce">
+                      </div>
+                      ঢাবিতে কাল থেকে টিকাদান শুরু
+                  </div>
+                   <a href=""> News number 3 </a>
+                   </li>
+                  <li class="li-list flex">
+                  <div class="list-alert-spinner">
+                                            <div class="double-bounce"></div>
+                                        </div>
+                  <a href=""> News number 4 </a>
+                  </li>
+                  <li class="li-list flex">
+                  <div class="list-alert-spinner">
+                                            <div class="double-bounce"></div>
+                                        </div>
+                  <a href=""> News number 5 </a>
+                  </li>
+                  <li class="li-list flex">
+                  <div class="list-alert-spinner">
+                                            <div class="double-bounce"></div>
+                                        </div>
+                  <a href=""> News number 6 </a>
+                  </li>
+                  <li class="li-list flex">
+                  <div class="list-alert-spinner">
+                                            <div class="double-bounce"></div>
+                                        </div>
+                  <a href=""> News number 7 </a>
+                  </li>
+                  <li class="li-list flex">
+                  <div class="list-alert-spinner">
+                                            <div class="double-bounce"></div>
+                                        </div>
+                  <a href=""> News number 8 </a>
+                  </li>
+                  <li class="li-list flex">
+                  <div class="list-alert-spinner">
+                                            <div class="double-bounce"></div>
+                                        </div>
+                  <a href=""> News number 9 </a>
+                  </li>
+                  <li class="li-list flex">
+                  <div class="list-alert-spinner">
+                                            <div class="double-bounce"></div>
+                                        </div>
+                  <a href=""> News number 10 </a>
+                  </li>
+
+              </ul>
+        </div>
+              {{-- New End --}}
+              {{-- <div class="col-12">
+                <span>You spin me right round, baby. Like a record, baby.</span>
+                <span>You spin me right round, baby. Like a record, baby.</span>
+              </div> --}}
             </div>
           </div>
         </div>
-        <div class="col-4">
-            <amp-social-share class="social_icon s_icon" style="width: 20px; height:30px" type="twitter"aria-label="Share on Twitter"></amp-social-share>
-            <amp-social-share class="social_icon s_icon" style="width: 20px; height:30px" type="facebook"aria-label="Share on facebook"></amp-social-share>
-            <amp-social-share class="social_icon s_icon" style="width: 20px; height:30px" type="linkedin"aria-label="Share on linkedin"></amp-social-share>
+        <div class="col-2">
+          <amp-social-share
+                                class="round mr1"
+                                type="facebook"
+                                width="18"
+                                height="18"
+                                data-param-app_id="563400841004160"
+                        >
+                        </amp-social-share>
+                        <amp-social-share
+                                class="circle mr1"
+                                type="twitter"
+                                width="18"
+                                height="18"
+                        >
+                        </amp-social-share>
+                        <amp-social-share
+                                class="circle mr1"
+                                type="whatsapp"
+                                width="18"
+                                height="18"
+                        >
+                        </amp-social-share>
+                        <amp-social-share
+                                class="circle mr1"
+                                type="linkedin"
+                                width="18"
+                                height="18"
+                        >
+                        </amp-social-share>
         </div>
       </div>
     </div>
