@@ -5089,17 +5089,13 @@
    .homeicon{
     font-size: 20px;
    }
-   .s_icon{
-    width: 32px;
-    height: 30px;
-    border-radius: 50px;
-   }
+   
    .logop{
     background-color: #4267b2;
     color: white;
     height: auto;
     margin-bottom: -29px;
-    margin-top: 84px;
+    margin-top: 72px;
     margin-right: -10px;
 
    }
@@ -5108,14 +5104,7 @@
     float: right;
     font-size: 12px;
    }
-   .social_icon{
-    float: right;
-    width: 35px ;
-    height: 25px ;
-    margin-left: 10px;
-    margin-bottom: 17px;
-
-   }
+   
    .bgnav{
     background-color:#334f89;
     margin-left: -53px;
@@ -5454,8 +5443,8 @@
     padding: 2px 5px;
     overflow: hidden;
     background-color: #2b509f;
-    width: 665px;
- }
+    width: 725px;
+}
      .ul-list{
        list-style: none;
 
