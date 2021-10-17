@@ -52,9 +52,9 @@
   <div class="P_part">
     <div class="container">
       <div class="row">
-        <div class="col-8">
+        <div class="col-10">
           <div class="row">
-              <div class="col-2 but_m">
+              <div class="col-2">
                 <div
                   role="button"
                   aria-label="open sidebar"
@@ -78,29 +78,27 @@
                       <div class="list-alert-spinner">
                           <div class="double-bounce"></div>
                       </div>
-                    <a href=""> News number 1 </a>
+                    <a href=""> বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক </a>
                    </li>
                   <li class="li-list flex">
                   <div class="list-alert-spinner">
                     <div class="double-bounce">
                     </div>
-                    বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক
                   </div>
-                   <a href=""> News number 2 </a>
+                   <a href=""> ঢাবিতে কাল থেকে টিকাদান শুরু </a>
                     </li>
                   <li class="li-list flex">
                   <div class="list-alert-spinner">
                       <div class="double-bounce">
                       </div>
-                      ঢাবিতে কাল থেকে টিকাদান শুরু
                   </div>
-                   <a href=""> News number 3 </a>
+                   <a href=""> বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক  </a>
                    </li>
                   <li class="li-list flex">
                   <div class="list-alert-spinner">
                                             <div class="double-bounce"></div>
                                         </div>
-                  <a href=""> News number 4 </a>
+                  <a href="">ঢাবিতে কাল থেকে টিকাদান শুরু</a>
                   </li>
                   <li class="li-list flex">
                   <div class="list-alert-spinner">
@@ -138,9 +136,8 @@
                                         </div>
                   <a href=""> News number 10 </a>
                   </li>
-
-              </ul>
-        </div>
+                </ul>
+              </div>
               {{-- New End --}}
               {{-- <div class="col-12">
                 <span>You spin me right round, baby. Like a record, baby.</span>
@@ -149,34 +146,35 @@
             </div>
           </div>
         </div>
-        <div class="col-2">
+        <div class="col-2 soci_icon">
           <amp-social-share
                                 class="round mr1"
                                 type="facebook"
-                                width="18"
-                                height="18"
+                                width="27"
+                                height="27"
+
                                 data-param-app_id="563400841004160"
                         >
                         </amp-social-share>
                         <amp-social-share
                                 class="circle mr1"
                                 type="twitter"
-                                width="18"
-                                height="18"
+                                width="27"
+                                height="27"
                         >
                         </amp-social-share>
                         <amp-social-share
                                 class="circle mr1"
                                 type="whatsapp"
-                                width="18"
-                                height="18"
+                                width="27"
+                                height="27"
                         >
                         </amp-social-share>
                         <amp-social-share
                                 class="circle mr1"
                                 type="linkedin"
-                                width="18"
-                                height="18"
+                                width="27"
+                                height="27"
                         >
                         </amp-social-share>
         </div>
