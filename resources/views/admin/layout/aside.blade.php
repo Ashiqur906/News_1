@@ -1,303 +1,206 @@
+  <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="#" class="brand-link ml-3">
-      <img src="{{asset('assets/admin/dist/img/avatar5.png')}}"
-           alt="shapla media"
-           class="brand-image img-circle elevation-3 ml-5"
-           style="opacity: .9"><br>
-      <span style="margin-left:rem " class="brand-text font-weight-light">{{Auth::user()->name}}</span>
+    <a href="index3.html" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">News 3</span>
     </a>
+
     <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user (optional) -->
+   <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
       <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview">
-            <a href="{{route('frontend.home')}}" class="nav-link">
-              <i class="fas fa-globe"></i>
-              <p>
-                Website
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>    
+     <nav class="mt-2">
+       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+                with font-awesome or any other icon font library -->
+            <li class="nav-item menu-open">
+              <a href="#" class="nav-link active">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link active">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard v1</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-chart-pie"></i>
+                <p>
+                  Category
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ route('admin.pages.category.create') }}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Add Category </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ route('admin.pages.category.list') }}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List Category</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-chart-pie"></i>
+                <p>
+                  Tag
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ route('admin.pages.tag.create')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Add Tag </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ route('admin.pages.tag.list') }}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List Tag</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-chart-pie"></i>
+                <p>
+                  News
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/charts/chartjs.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Add News </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ route('admin.pages.news.list') }}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List News</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon far fa-image"></i>
+                <p>
+                  Gallery
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/charts/chartjs.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Add Gallery</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/charts/flot.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List Gallery</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="pages/widgets.html" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Widgets
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-header">EXAMPLES</li>
+              <li class="nav-item">
+                <a href="pages/calendar.html" class="nav-link">
+                  <i class="nav-icon far fa-calendar-alt"></i>
+                  <p>
+                    Calendar
+                    <span class="badge badge-info right">2</span>
+                  </p>
+                </a>
+              </li>
+            </li>
           </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('home')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-            
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="fas fa-tachometer-alt"></i>
-              <p>
-                Category
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('category.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Category List</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('category.add')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add Category</p>
-                </a>
-              </li>
-            
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="fas fa-tachometer-alt"></i>
-              <p>
-                Tag
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('tag.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tag List</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('tag.add')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add Tag</p>
-                </a>
-              </li>      
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="fas fa-tachometer-alt"></i>
-              <p>
-                Genre
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                {{-- <a href="{{route('genre.index')}}" class="nav-link"> --}}
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Genre List</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                {{-- <a href="{{route('genre.add')}}" class="nav-link"> --}}
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add Genre</p>
-                </a>
-              </li>     
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="fas fa-tachometer-alt"></i>
-              <p>
-                Slider
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('banner.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Slider List</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('banner.add')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add Slider</p>
-                </a>
-              </li>    
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="fas fa-photo-video"></i>
-              <p>
-                Media 
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('media.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Media List</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('media.add')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add Media</p>
-                </a>
-              </li>      
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="fas fa-id-badge"></i>
-              <p>
-                Profile 
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('people.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Profile List</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('people.add')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add Profile</p>
-                </a>
-              </li>      
-              <!-- <li class="nav-item">
-                <a href="{{route('people.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Team List</p>
-                </a>
-              </li> -->
-              <li class="nav-item">
-                <a href="{{route('team.add')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add Team Profile</p>
-                </a>
-              </li>      
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="fas fa-tachometer-alt"></i>
-              <p>
-                Role 
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('role.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Role List</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('role.add')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add Role</p>
-                </a>
-              </li>    
-            </ul>
-          </li>        
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="fas fa-images"></i>
-              <p>
-                Gallery Image
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('mediaimage.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Image List</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('mediaimage.add')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add Image For Specific Media</p>
-                </a>
-              </li>
-            
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="far fa-address-card"></i>
-              <p>
-                About
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('about.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Detail</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('about.add')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add</p>
-                </a>
-              </li>    
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="far fa-newspaper"></i>
-              <p>
-                Press Releases
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Detail</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add</p>
-                </a>
-              </li>    
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Widgets
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
-          </li>      
         </ul>
-      </nav>
+    </nav>
       <!-- /.sidebar-menu -->
-    </div>
+  </div>
     <!-- /.sidebar -->
 </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="" style="margin-left: 240px;" >Dashboard</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" style="float: right; color:white;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }} <span class="caret"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </div>
+              </li>
+            </ul>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->

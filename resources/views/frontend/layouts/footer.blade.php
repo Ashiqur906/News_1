@@ -1,6 +1,54 @@
 <!-- footer start -->
-<div class="P_part1">
+<div class="foot_part1">
     <div class="container">
+      <div class="row">
+        <div class=" col-3 foot_logo ">
+          <amp-img src="img/bbc_bangla.PNG" layout="responsive" class="logo_img_foot" width="150px" height="65px" style="margin-left: -12px;"></amp-img>
+        </div>
+        <div class="col-6 m_b" >
+          <div class="row">
+            <div class="col-8">
+              <form class="sample-form" method="GET" action="/documentation/examples/api/submit-form" target="_top">
+                <input type="search" placeholder="Search..." name="search">
+                <input type="submit" value="search">
+              </form>
+            </div>
+              <p class="logo_foot_taxt" [text]="'Hello ' + foo"> ঢাকা, বুধবার, ২৯ সেপ্টেম্বর ২০২১ | ১৪ আশ্বিন ১৪২৮ বঙ্গাব্দ</p>
+          </div>
+        </div>
+          <div class="col-3 m_b">
+            <amp-social-share
+                                  class="round mr1"
+                                  type="facebook"
+                                  width="27"
+                                  height="27"
+  
+                                  data-param-app_id="563400841004160"
+                          >
+                          </amp-social-share>
+                          <amp-social-share
+                                  class="circle mr1"
+                                  type="twitter"
+                                  width="27"
+                                  height="27"
+                          >
+                          </amp-social-share>
+                          <amp-social-share
+                                  class="circle mr1"
+                                  type="whatsapp"
+                                  width="27"
+                                  height="27"
+                          >
+                          </amp-social-share>
+                          <amp-social-share
+                                  class="circle mr1"
+                                  type="linkedin"
+                                  width="27"
+                                  height="27"
+                          >
+                          </amp-social-share>
+          </div>
+      </div>
       <div class="row">
         <div class="col-4 foot_menu">
           <ul>
@@ -21,7 +69,7 @@
               </li>
             </ul>
         </div>
-        <div class="col-4 foot_part2" style="color: white; margin-bottom: 0px; margin-top: 20px;">
+        <div class="col-4 foot_part2">
           <p><a href="#">বাংলাদেশ</a></p>
           <p><a href="#">আন্তর্জাতিক</a></p>
           <p><a href="#">বিনোদন</a></p>
@@ -47,8 +95,10 @@
               </li>
             </ul>
         </div>
-        <span class="copy_footer">© Copyright 2021 AMP - All Rights Reserved</span>
       </div>
+    </div>
+    <div class="container-flud foot_copy">
+      <span class="foot_copy_text">© Copyright 2021 Cinebaz - All Rights Reserved</span>
     </div>
   </div>
    <!-- footer end -->

@@ -8,7 +8,8 @@ class CategoryController extends Controller
 {
     public function category()
     {
-        // $banner['slider'] = Banner::orderBy('id', 'desc')->get();
-        return view('frontend.pages.category');
+        
+        return view('frontend.pages.category'); 
     }
+   
 }
