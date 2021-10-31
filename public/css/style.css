@@ -68,7 +68,7 @@
     color: #6060608f;
     font-size: 11px;
     white-space: normal;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     line-height: 1.2;
@@ -129,13 +129,11 @@
 
   .h_c{
     font-size: 2rem;
-    background: #e9e9e9b0;
     padding: 2px;
     border-bottom: 3px solid red;
   }
   .h_csl{
     font-size: 2rem;
-    background: #e9e9e9b0;
     padding: 2px;
     border-bottom: 3px solid red;
     margin-left: -15px;
@@ -188,13 +186,13 @@
     letter-spacing: .0071428571em;
   }
 
-  .hov_b{
+  /* .hov_b{
        transition: 1s;
   }
   .hov_b:hover{
         transform:scale(1.1);
         z-index: 2;
-     }
+     } */
 
   .h_c6{
     font: bold; 
@@ -346,10 +344,10 @@
   
        }
 
-  .part_6_con:hover{
+  /* .part_6_con:hover{
       transform:scale(1.1);
       z-index: 2;
-     }
+     } */
 
 /*part_6 end*/
 
@@ -386,6 +384,7 @@
     .ajnews{
       color: white;
       margin-right: -80px;
+      text-align: end;
     }
     .but_m{
       margin-right: -80px;

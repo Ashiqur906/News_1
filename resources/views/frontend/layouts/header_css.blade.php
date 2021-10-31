@@ -11,6 +11,8 @@
     <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
     <!-- Import other AMP Extensions here -->
     
     
@@ -5075,14 +5077,21 @@
 
  
    /*top_part start*/
+   .first_1{
+    margin-top: 175px;
+   }
+   .first_2{
+    margin-top: 37px;
+   }
    .P_part{
-    background-color: #334f89;
+    background-color: #000000;
     color: white;
     padding-top: 15px;
     margin-bottom: -22px;
+    margin-top: 29px;
    }
    .P_part1{
-    background-color: #334f89;
+    background-color: #000000;
     color: white;
     margin-top: 22px;
    }
@@ -5091,28 +5100,28 @@
    }
    
    .logop{
-    background-color: #4267b2;
+    background-color: #b80000;
     color: white;
     height: auto;
     margin-bottom: -29px;
-    margin-top: 72px;
     margin-right: -10px;
 
    }
    .logo_p_taxt{
-    margin-top: 4px;
-    float: right;
+    margin-top: 37px;
     font-size: 12px;
    }
+  .so-icon{
+    margin-top: 30px;
+  }
    
    .bgnav{
-    background-color:#334f89;
-    margin-left: -53px;
+    background-color:#000000;
+    
     
    }
    .bgnav li a{
     color: white;
-    padding: 2px;
     padding: 0px 0px 0px 23px;
     text-decoration: none;
    }
@@ -5120,12 +5129,14 @@
 
   /*slide_bar start*/
    .slide_text_1{
-    background-color: #e1e1e170;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding-top: 7px;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 5px;
    }
+
   .slide_text h3{
-    font-size: 11px;
+    font-size: 16px;
     white-space: normal;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -5137,7 +5148,7 @@
     text-overflow: ellipsis;
     font-family: SolaimanLipi,AdorshoLipi,voice;
     font-weight: 400;
-    line-height: 1.0rem;
+    line-height: 1.4rem;
     letter-spacing: .0071428571em;
     margin-left: -14px;
   }
@@ -5145,7 +5156,7 @@
     color: #6060608f;
     font-size: 11px;
     white-space: normal;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     line-height: 1.2;
@@ -5166,21 +5177,42 @@
     margin-left: 544px;
     margin-bottom: 26px;
     margin-top: 31px;
-
   }
+  .logo_foot_taxt{
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+
+  .foot_copy{
+    background-color: #b80000;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+  }
+
+  .foot_part1{
+    background-color:#000000;
+    color: white;
+    margin-top: 22px;
+   }
   .foot_menu{
-    margin-top: 20px;
-    border-left: 2px solid white;
+    margin-top: 37px;
+    border-left: 5px solid #b80000;
+    margin-bottom: 34px;
   }
   .foot_menu ul li a{
     color: white;
     text-decoration: none;
   }
   .foot_part2{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-left: 2px solid white;
+    margin-top: 37px;
+    border-left: 5px solid #b80000;
+    margin-bottom: 30px;
     text-decoration: none;
+  }
+  .m_b{
+    margin-top: 3rem;
+    border-bottom: 5px solid #b80000;
   }
   .foot_part2 p a{
   
@@ -5189,8 +5221,9 @@
      text-decoration: none;
   }
   .foot_last{
-    margin-top: 20px;
-    border-left: 2px solid white;
+    margin-top: 37px;
+    border-left: 5px solid #b80000;
+    margin-bottom: 34px;
   }
   .foot_last ul li a{
     color: white;
@@ -5212,13 +5245,11 @@
 
   .h_c{
     font-size: 2rem;
-    background: #e9e9e9b0;
     padding: 2px;
     border-bottom: 3px solid red;
   }
   .h_csl{
     font-size: 2rem;
-    background: #e9e9e9b0;
     padding: 2px;
     border-bottom: 3px solid red;
     margin-left: -15px;
@@ -5436,14 +5467,34 @@
 
 /*part_6 end*/
 
+/* video part start  */
+.videoh3{
+    font-size: 20px;
+    white-space: normal;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    color: rgb(2 0 0);
+    line-height: 1.2;
+    flex: 1 1 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: SolaimanLipi,AdorshoLipi,voice;
+    font-weight: 400;
+    line-height: 2.0rem;
+    letter-spacing: .0071428571em;
+}
+
+/* video part end */
+
 /*marquee start*/
 /* New */
 .slide-marquee{
     background: linear-gradient(45deg,transparent,#6e7687);
     padding: 2px 5px;
     overflow: hidden;
-    background-color: #2b509f;
-    width: 725px;
+    background-color: #b80000;
+    width: 100%;
 }
      .ul-list{
        list-style: none;
@@ -5533,7 +5584,7 @@
 
     .ajnews{
       color: white;
-      
+      margin-left: 10px;
     }
     .but_m{
       margin-right: -80px;
@@ -5565,8 +5616,9 @@
     line-height: 2.0rem;
     letter-spacing: .0071428571em;
 }
+
 .conp{
-	font-size: 12px;
+	font-size: 15px;
     color: #aba8a8d4;
     text-align: justify;
     white-space: normal;
@@ -5586,6 +5638,7 @@
   .dtext{
     text-align: justify;
     padding-right: 23px;
+    font-family: SolaimanLipi,AdorshoLipi,voice;
   }
 
   .date_text{
@@ -5595,14 +5648,20 @@
     border-bottom: 5px solid #9999997a;
     padding-bottom: 5px;
     font-size: 24px;
+    margin-bottom: 10px;
   }
 
   .h_csl_det{
     font-size: 2rem;
-    background: #e9e9e9b0;
     padding: 2px;
     border-bottom: 3px solid red;
     margin-left: -15px;
+    margin-top: 0px;
+  }
+  .h_csl_det2{
+    font-size: 2rem;
+    padding: 2px;
+    border-bottom: 3px solid red;
     margin-right: -16px;
     margin-top: 0px;
   }
@@ -5626,9 +5685,88 @@
     margin-left: -13px;
 }
 /* category page end  */
-    </style>
+
+
+/* amp responsive part start */
+@media (max-width: 768px){
+
+ .ajnews{
+      display: none;
+    }
+    .so-icon{
+      display: none;
+    
+    }
+    .P_part1{
+      display:none;
+    }
+.P_part{
+  padding-bottom: 15px;
+}
+
+.logop{
+ 
+  margin-right: 0px;
+}
+.logo_img{
+    width: 122px;
+    height: 38px;
+    margin-top: 28px;
+}
+
+.logo_p_taxt{
+  margin-top: 35px;
+}
+.part_6_con11{
+  width: 497px;
+  height: 319px;
+}
+.test_p6{
+  margin-top: 168px;
+}
+.detr{
+  margin-top: 60px;
+}
+.part_6_con1{
+  width: auto;
+  height: 148px;
+}
+
+.res_4{
+  margin-left: 162px;
+  width: 63.333333%;
+}
+.test2_p6_first{
+  margin-top: 45px;
+}
+
+/* details page responsive start  */
+.part_6_con11_det{
+    width: 256px;
+    height: 210px;
+}
+/* details page responsive end  */
+/* footer responsive start  */
+.logo_img_foot{
+  margin-top: 54px;
+}
+/* footer responsive end */
+
+}
+
+
+
+
+
+@media (min-width: 576px){}
+@media (min-width: 768px){}
+@media (min-width: 992px){}
+@media (min-width: 1auto){}
+
+/* amp responsive part end */    
+</style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
     <link rel="canonical" href=".">
 
-    <title>Nwes1</title>
+    <title>Nwes2</title>
