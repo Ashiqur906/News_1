@@ -2,23 +2,46 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostFV;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        $post = Post::orderBy('id', 'desc')->paginate(5);
-        return view('admin.pages.post.list', compact('post'));
+	    $queryWhere = [];
+	    $per_page = 5;
+	    if($request->id) {
+	    	$queryWhere['id'] = $request->id;
+	    }
+	    if($request->media_type) {
+	    	$queryWhere['media_type'] = $request->media_type;
+	    }
+	    if($request->name) {
+	    	$queryWhere[] = ['name', 'LIKE', '%'.$request->name.'%'];
+	    }
+	    if($request->name) {
+	    	$queryWhere[] = ['name', 'LIKE', '%'.$request->name.'%'];
+	    }
+	    if($request->per_page) {
+	    	$per_page = $request->per_page;
+	    }
+	    if($request->release_date) {
+		    $queryWhere['release_date'] = $request->release_date;
+	    }
+
+        $posts = Post::where($queryWhere)->paginate($per_page);
+        return view('admin.pages.post.list', compact('posts','request'));
     }
 
     public function add()
     {
-        $movie = Post::orderBy('id', 'desc')->get();
+        $posts = Post::orderBy('id', 'desc')->get();
         $role = Role::orderBy('sort_by', 'ASC')->get();
         $people = Entity::orderBy('id', 'desc')->get();
-        $category = Category::orderBy('id', 'desc')->get();
+        $category = Categoty2::orderBy('id', 'desc')->get();
         $fdata = new Post();
         // dd($role);
 
@@ -37,9 +60,9 @@ class PostController extends Controller
 
     public function edit($id, Request $request)
     {
-        $post = Post::orderBy('id', 'desc')->get();
+        $posts = Post::orderBy('id', 'desc')->get();
         $fdata    = Post::findOrfail($id);
-        $category = Category::orderBy('id', 'desc')->get();
+        $category = Categoty2::orderBy('id', 'desc')->get();
         $role = Role::orderBy('id', 'desc')->get();
         $people = Entity::orderBy('id', 'desc')->get();
         return view('admin.pages.post.create')->with([
@@ -54,7 +77,7 @@ class PostController extends Controller
 
         //return view('admin.pages.movie.edit', $data);
     }
-    public function store(MediaFv $request)
+    public function store(PostFV $request)
     {
         // return $request;
         // return $request;
@@ -100,7 +123,7 @@ class PostController extends Controller
         try {
             if ($id) {
                 $existing = Post::findOrFail($id);
-                $sumbit =  Media::where('id', $id)->update($attributes);
+                $sumbit =  Post::where('id', $id)->update($attributes);
 
                 $entities = $this->mergeArrays(
                     $request->casts,
@@ -119,17 +142,17 @@ class PostController extends Controller
                 $abledata = [
                     'data' => $request,
                     'able_id' => $id,
-                    'able_type' => Media::class,
+                    'able_type' => Post::class,
                 ];
                 // $this->seoPost($abledata);
             } else {
 
-                $insert = Media::create($attributes);
+                $insert = Post::create($attributes);
                 $abledata = [
                     'data' => $request,
                     'able_id' => $insert->id,
 
-                    'able_type' => Media::class,
+                    'able_type' => Post::class,
                 ];
 
                 // $this->seoPost($abledata);
@@ -192,13 +215,13 @@ class PostController extends Controller
 
     public function delete($id)
     {
-        $post = Media::findOrfail($id);
-        if (!is_null($post)) {
+        $posts = Post::findOrfail($id);
+        if (!is_null($posts)) {
             //Delete Image
-            if (File::exists($post->potraitimage, $post->landscapeimage)) {
-                File::delete($post->potraitimage, $post->landscapeimage);
+            if (File::exists($posts->potraitimage, $posts->landscapeimage)) {
+                File::delete($posts->potraitimage,$posts->landscapeimage);
             }
-            $post->delete();
+            $posts->delete();
         }
         return redirect('/admin/post')->with("success", "Post deleted successfully.");
     }
