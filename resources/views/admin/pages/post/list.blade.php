@@ -2,7 +2,7 @@
 @section('content')
   <div class="content-wrapper">
       <div class="card-header">
-        <h3 class="card-title">Media List</h3>
+        <h3 class="card-title">Post List</h3>
           {{-- <a href="{{ route('media.add') }}" class="btn btn-primary float-right">Add Media</a> --}}
       </div>
           <!-- Main content -->
@@ -19,13 +19,13 @@
                 {{ Form::select('per_page', array_combine([5,10,20,40], [5,10,20,40]), $request->per_page, ['class' => 'form-control autoSubmit']) }}
               </div>
               <div class="w-auto mx-2">
-                <a href="{{ route('admin.pages.category.create') }}" class="btn btn-outline-primary">+ Add Category</a>
+                <a href="{{ route('admin.pages.post.create') }}" class="btn btn-outline-primary">+ Add Post</a>
               </div>
               <div class="w-auto mx-2">
-                <a href="{{ route('admin.pages.category.list') }}" class="btn btn-outline-secondary btn-sm mt-1"><i class="fa fa-undo"></i>Clear</a>
+                <a href="{{ route('admin.pages.post.list') }}" class="btn btn-outline-secondary btn-sm mt-1"><i class="fa fa-undo"></i>Clear</a>
               </div>
               <div class="w-auto ml-auto">
-                <h3 class="card-title">Showing {{$categoty2s->firstItem()}}-{{$categoty2s->lastItem()}} of {{$categoty2s->total()}} items.</h3>
+                <h3 class="card-title">Showing {{$posts->firstItem()}}-{{$posts->lastItem()}} of {{$posts->total()}} items.</h3>
               </div>
             </div>
           </div>
@@ -44,7 +44,7 @@
               <tr>
                 <th><input type="number" name="id" class="form-control autoSubmit" value="{{$request->id}}"></th>
                 <th><input type="text" name="name" class="form-control autoSubmit" value="{{$request->name}}"></th>
-                <th><input type="text" name="name" class="form-control autoSubmit" value="{{$request->name}}"></th>
+                <th><input type="text" name="title" class="form-control autoSubmit" value="{{$request->title}}"></th>
                 <th><input type="text" name="name" class="form-control autoSubmit" value="{{$request->name}}"></th>
                 <th></th>
               </tr>
@@ -69,10 +69,17 @@
           </table>
         </div>
         <div class="card-footer clearfix">
-              {{-- {!! $movie->links('pagination::bootstrap-4') !!} --}}
+              {!! $posts->links('pagination::bootstrap-4') !!}
           </div>
       </div>
     </section>
   </div>
 @endsection
+@push('customjs')
+    <script>
+      $(".autoSubmit").change(function() {
+        $(this).parents("form").submit()
+      });
+    </script>
+@endpush
 

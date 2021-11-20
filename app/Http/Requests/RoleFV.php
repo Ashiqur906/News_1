@@ -25,6 +25,7 @@ class RoleFV extends FormRequest
     {
         return [
             'title' => 'required',
+            'name' => 'required',
         ];
     }
 }

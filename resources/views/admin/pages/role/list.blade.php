@@ -3,7 +3,7 @@
   <div class="content-wrapper">
     <section class="content">
       <div class="card-header">
-        <h3 class="card-title">Tag List</h3>
+        <h3 class="card-title">Role List</h3>
           <a href="{{ route('admin.pages.role.create') }}" class="btn btn-primary float-right">Add Role</a>
       </div>
       <!-- /.card-header -->
@@ -30,19 +30,17 @@
            <table  class="table table-bordered table-hover dataTable" >
               <thead>
                 <tr role="row">
-                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending">
-                        Id
-                    </th>
-                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
-                        Title
-                    </th>
-                  
-                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
-                        Action
-                    </th>
+                  <th> ID </th>
+                  <th> Title </th>
+                  <th> Name </th>
+                  <th> Is Important </th>
+                  <th> Is Character </th>
+                  <th> Position </th>
+                  <th>Action</th> 
                 </tr>
                 <tr>
                   <th><input type="number" name="id" class="form-control autoSubmit" value="{{$request->id}}"></th>
+                  <th><input type="text" name="title" class="form-control autoSubmit" value="{{$request->title}}"></th>
                   <th><input type="text" name="name" class="form-control autoSubmit" value="{{$request->name}}"></th>
                   <th></th>
                 </tr>
@@ -51,10 +49,14 @@
                 @foreach ($roles as $item)
                   <tr role="row" class="odd">
                     <td class="">{{$item->id}}</td>
+                    <td>{{$item->title}}</td>
                     <td>{{$item->name}}</td>
+                    <td>{{$item->is_important}}</td>
+                    <td>{{$item->is_character}}</td>
+                    <td>{{$item->sort_by}}</td>
                     <td class="sorting_1 btn-group">
-                      <a href="{{url('admin/tag')}}/edit/{{$item->id}}" class="btn btn-success">Edit</a>
-                      <a href="{{ url('admin/tag') }}/delete/{{$item->id}}" class="btn btn-danger">Delete</a>
+                      <a href="{{url('admin/role')}}/edit/{{$item->id}}" class="btn btn-success">Edit</a>
+                      <a href="{{ url('admin/role') }}/delete/{{$item->id}}" class="btn btn-danger">Delete</a>
                       <a href="#" class="btn btn-primary">View</a>
                     </td>
                   </tr>

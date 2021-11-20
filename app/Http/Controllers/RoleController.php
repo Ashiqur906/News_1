@@ -19,6 +19,9 @@ class RoleController extends Controller
 	    if($request->title) {
 	    	$queryWhere[] = ['title', 'LIKE', '%'.$request->title.'%'];
 	    }
+        if($request->name) {
+	    	$queryWhere[] = ['name', 'LIKE', '%'.$request->name.'%'];
+	    }
 	    if($request->per_page) {
 	    	$per_page = $request->per_page;
 	    }
@@ -51,7 +54,7 @@ class RoleController extends Controller
         $id = $request->get('id');
         $atttributes = [
             'name' => $request->get('name'),
-            'slug' => $request->get('slug')
+            'title' => $request->get('title')
         ];
 
         try {

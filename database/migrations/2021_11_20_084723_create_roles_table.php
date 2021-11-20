@@ -17,7 +17,6 @@ class CreateRolesTable extends Migration
         Schema::create('roles', function (Blueprint $table) {
             $table->id('id', true);
             $table->string('title', 255)->nullable();
-            // Hasan Defaul coulmns 
             $table->string('remarks')->nullable();
             $table->integer('sort_by')->nullable();
             $table->enum('is_active', ['Yes', 'No'])->default('Yes');
