@@ -22,14 +22,14 @@
       </a>
       <div class="navbar-search-block">
         <form class="form-inline">
-          <div class="input-group input-group-sm">
+          <div class="input-group input-group-sm" style="width: 25%; margin-left: 1156px;">
             <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
               <button class="btn btn-navbar" type="submit">
-                <i class="fas fa-search"></i>
+                <i class="fas fa-search" style="color: white;"></i>
               </button>
               <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                <i class="fas fa-times"></i>
+                <i class="fas fa-times" style="color: white;"></i>
               </button>
             </div>
           </div>
@@ -38,7 +38,7 @@
     </li>
 
     <!-- Messages Dropdown Menu -->
-    <li class="nav-item dropdown">
+    {{-- <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
         <i class="far fa-comments"></i>
         <span class="badge badge-danger navbar-badge">3</span>
@@ -94,9 +94,9 @@
         <div class="dropdown-divider"></div>
         <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
       </div>
-    </li>
+    </li> --}}
     <!-- Notifications Dropdown Menu -->
-    <li class="nav-item dropdown">
+    {{-- <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
         <i class="far fa-bell"></i>
         <span class="badge badge-warning navbar-badge">15</span>
@@ -131,7 +131,26 @@
       <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
         <i class="fas fa-th-large"></i>
       </a>
-    </li>
+    </li> --}}
+    {{-- <div class="col-sm-6">
+      <ul class="navbar-nav ml-auto"> --}}
+        <li class="nav-item dropdown">
+          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" style="float: right; color:white;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+              {{ Auth::user()->name }} <span class="caret"></span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ route('logout') }}"
+                  onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                  {{ __('Logout') }}
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+              </form>
+          </div>
+        </li>
+      {{-- </ul>
+    </div> --}}
   </ul>
 </nav>
 <!-- /.navbar -->

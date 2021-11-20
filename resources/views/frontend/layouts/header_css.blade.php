@@ -25,12 +25,7 @@
 
 
     /* Add your styles here */
-    /*!
-    * Bootstrap Grid v5.1.3 (https://getbootstrap.com/)
-    * Copyright 2011-2021 The Bootstrap Authors
-    * Copyright 2011-2021 Twitter, Inc.
-    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-    */
+  
  :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -1792,7 +1787,9 @@
 
 .mb-2 {
   margin-bottom: 0.5rem;
+
 }
+
 
 .mb-3 {
   margin-bottom: 1rem;
@@ -5078,7 +5075,7 @@
  
    /*top_part start*/
    .first_1{
-    margin-top: 175px;
+    margin-top: 185px;
    }
    .first_2{
     margin-top: 37px;
@@ -5119,6 +5116,10 @@
     background-color:#000000;
     
     
+   }
+
+   .bgnav ul li a{
+    border-left: 1px solid #b80000;
    }
    .bgnav li a{
     color: white;
@@ -5188,6 +5189,7 @@
     background-color: #b80000;
     padding: 20px 0px 20px 0px;
     text-align: center;
+    font-family: monospace;
   }
 
   .foot_part1{
@@ -5197,7 +5199,7 @@
    }
   .foot_menu{
     margin-top: 37px;
-    border-left: 5px solid #b80000;
+    border-left: 1px solid #b80000;
     margin-bottom: 34px;
   }
   .foot_menu ul li a{
@@ -5206,23 +5208,28 @@
   }
   .foot_part2{
     margin-top: 37px;
-    border-left: 5px solid #b80000;
+    border-left: 1px solid #b80000;
     margin-bottom: 30px;
     text-decoration: none;
   }
-  .m_b{
-    margin-top: 3rem;
-    border-bottom: 5px solid #b80000;
+  .m_b1{
+    margin-top: 47px;
+    /* border-bottom: 1px solid #b80000; */
+  }
+  .m_b2{
+    margin-top: 63px;
+    /* border-bottom: 1px solid #b80000; */
   }
   .foot_part2 p a{
   
      color: white;
      margin-bottom: 0px;
      text-decoration: none;
+     margin-left: 40px;
   }
   .foot_last{
     margin-top: 37px;
-    border-left: 5px solid #b80000;
+    border-left: 1px solid #b80000;
     margin-bottom: 34px;
   }
   .foot_last ul li a{
@@ -5240,7 +5247,13 @@
     background-color: #ededed82;
     padding: 8px;
     margin-bottom: 15px;
+    height: 140px;
+
+  }
+  .cont_1:hover{
     box-shadow: 1px 1px 8px 1px darkgrey;
+    transition: 2s;
+  
   }
 
   .h_c{
@@ -5258,10 +5271,14 @@
 
 /*content part বিনোদন start */
 .cont_2{
-    background-color: #edededd1;
+    background-color: #f6f6f6;
     padding: 8px;
     margin-bottom: 30px;
+
+  }
+  .cont_2:hover{
     box-shadow: 1px 1px 8px 1px darkgrey;
+    transition: 2s;
 
   }
   .h_c4{
@@ -5406,7 +5423,28 @@
     color: white;
     font-size: 11px;
     white-space: normal;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    line-height: 1.2;
+    flex: 1 1 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: SolaimanLipi,AdorshoLipi,voice;
+    /* padding-top: 10px; */
+    font-weight: 400;
+    line-height: 1.0rem;
+    letter-spacing: .0071428571em;
+}
+
+
+.test2_p6_first span{
+
+    background: linear-gradient(transparent,rgb(0 0 0));
+    color: white;
+    font-size: 15px;
+    white-space: normal;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     line-height: 1.2;
@@ -5441,7 +5479,7 @@
 
      }
      .h_p6_first{
-      font-size: 12px;
+      font-size: 19px;
       color: white;
       border-bottom: 2px solid red;
       white-space: normal;
@@ -5553,6 +5591,17 @@
          left: 0;
      }
 /* End */
+
+.marbg{
+    background: linear-gradient(45deg,transparent,#6e7687);
+    background-color: #b80000;
+    padding-top: 5px;
+}
+.marbg a{
+  text-decoration: none;
+}
+
+
     .marquee {
       height: 25px;
       width: 420px;
@@ -5596,12 +5645,11 @@
     font-size: 20px;
     border-bottom: 2px solid red;
     padding-bottom: 8px;
-    margin-left: -13px;
     margin-top: 195px;
 }
 
 .conh{
-	font-size: 20px;
+	  font-size: 18px;
     white-space: normal;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -5622,7 +5670,7 @@
     color: #aba8a8d4;
     text-align: justify;
     white-space: normal;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     line-height: 1.2;
@@ -5637,7 +5685,6 @@
 
   .dtext{
     text-align: justify;
-    padding-right: 23px;
     font-family: SolaimanLipi,AdorshoLipi,voice;
   }
 
@@ -5645,10 +5692,10 @@
     color: #6a5d5d94
   }
   .cat_d_h2{
-    border-bottom: 5px solid #9999997a;
+    border-bottom: 2px solid #ff0000;
     padding-bottom: 5px;
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 28px;
   }
 
   .h_csl_det{
@@ -5674,15 +5721,19 @@
   background: round;
   margin-bottom: 10px;
 }
+
+.det_mb{
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f1f1f1;
+}
 /* details page css end  */
 
 /* category page start  */
 .dh_2_cat{
-	color: #000000;
+	  color: #000000;
     font-size: 20px;
     border-bottom: 2px solid red;
     padding-bottom: 8px;
-    margin-left: -13px;
 }
 /* category page end  */
 
@@ -5745,10 +5796,15 @@
     width: 256px;
     height: 210px;
 }
+
 /* details page responsive end  */
 /* footer responsive start  */
 .logo_img_foot{
   margin-top: 54px;
+  margin-left: -12px;
+  height: 40px;
+  width: 80px;
+
 }
 /* footer responsive end */
 

@@ -1,5 +1,5 @@
 @if (count($errors) > 0)
-<div class="alert alert-danger">
+<div class="alert alert-danger" style="margin-left: 246px;">
   <strong>Whoops!</strong> There were some problems with your input.<br><br>
   <ul>
     @foreach ($errors->all() as $error)

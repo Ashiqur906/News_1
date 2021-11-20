@@ -3,13 +3,11 @@
 namespace App\Http\Controllers;
 
 
-use App\Http\Requests\TagFV;
-use App\Models\Tag;
+use App\Http\Requests\RoleFV;
+use App\Models\Role;
 use Illuminate\Http\Request;
-// use App\Http\Requests\Request;
 
-
-class TagController extends Controller
+class RoleController extends Controller
 {
     public function index(Request $request)
     {
@@ -18,24 +16,21 @@ class TagController extends Controller
 	    if($request->id) {
 	    	$queryWhere['id'] = $request->id;
 	    }
-	    if($request->name) {
-	    	$queryWhere[] = ['name', 'LIKE', '%'.$request->name.'%'];
-	    }
-        if($request->name) {
-	    	$queryWhere[] = ['name', 'LIKE', '%'.$request->name.'%'];
+	    if($request->title) {
+	    	$queryWhere[] = ['title', 'LIKE', '%'.$request->title.'%'];
 	    }
 	    if($request->per_page) {
 	    	$per_page = $request->per_page;
 	    }
 
-        $tags = Tag::where($queryWhere)->paginate($per_page);
-        return view('admin.pages.tag.list', compact('tags','request'));
+        $roles = Role::where($queryWhere)->paginate($per_page);
+        return view('admin.pages.role.list', compact('roles','request'));
     }
 
     public function add()
     {   
 
-        return view('admin.pages.tag.create')->with([
+        return view('admin.pages.role.create')->with([
             'fdata' => null,
             'mdata' => null
         ]);
@@ -43,13 +38,13 @@ class TagController extends Controller
 
     public function edit($id, Request $request)
     {
-        $fdata    = Tag::findOrfail($id);
-        return view('admin.pages.tag.create')->with([
+        $fdata    = Role::findOrfail($id);
+        return view('admin.pages.role.create')->with([
             'fdata'     => $fdata,
             'mdata'     => null
         ]);
     }
-    public function store(TagFV $request)
+    public function store(RoleFV $request)
     {   
 
         // return $request;
@@ -61,11 +56,11 @@ class TagController extends Controller
 
         try {
             if ($id) {
-                $data = Tag::where('id', $id)->update($atttributes);
+                $data = Role::where('id', $id)->update($atttributes);
             } else {
-                $date = Tag::create($atttributes);
+                $date = Role::create($atttributes);
             }
-            return redirect()->route('admin.pages.tag.list')->with("Success", "Successfully save changed");
+            return redirect()->route('admin.pages.role.list')->with("Success", "Successfully save changed");
         } catch (\Illuminate\Database\QueryException $ex) {
             return redirect()->back()->withErrors($ex->getMessage())
                 ->with('myexcep', $ex->getMessage())->withInput();
@@ -75,7 +70,8 @@ class TagController extends Controller
     public function delete($id)
     {
         //    dd($id);
-        $tag = Tag::where('id', $id)->delete();
-        return redirect('admin/tag')->with('success', 'tag has deleted successfully.');
+        $roles = Role::where('id', $id)->delete();
+        return redirect('admin/role')->with('success', 'role has deleted successfully.');
     }
 }
+

@@ -3,7 +3,7 @@
     <!-- details part1 start -->
     <div class="container first_1">
       <div class="row">
-        <div class="col-7">
+        <div class="col-9">
           <span class="cat_d_h2">বাংলাদেশ</span>
           <p style="font-size: 14px; color: #adadadc2;;"><amp-img style="margin-left: 5px;" src="img/location.png" width="13px" height="19px"></amp-img><span> </span> ঢাকা</p>
           <h2 class="conh">সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</h2>
@@ -14,70 +14,63 @@
             প্রতারণা ও জালিয়াতির মাধ্যমে ফারমার্স ব্যাংকের (বর্তমানে পদ্মা ব্যাংক) চার কোটি টাকা আত্মসাতের অভিযোগে সাবেক প্রধান বিচারপতি সুরেন্দ্র কুমার সিনহাসহ ১১ জনের বিরুদ্ধে করা মামলার রায় ঘোষণার তারিখ পিছিয়েছে। রায় ঘোষণার নতুন তারিখ ২১ অক্টোবর।
           </p>
         </div>
-        <div class="col-5">
+        <div class="col-3">
           <h2 class="dh_2">এ সম্পর্কিত আরও পড়ুন</h2>
-          <div class="row mb-2">
-            <h2 class="conh">সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</h2>
+          <div class="row det_mb ">
             <div class="col-7">
+              <h2 class="conh">সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</h2>
               <p class="conp">প্রতারণা ও জালিয়াতির মাধ্যমে ফারমার্স ব্যাংকের (বর্তমানে পদ্মা ব্যাংক) চার কোটি টাকা আত্মসাতের অভিযোগে সাবেক প্রধান বিচারপতি সুরেন্দ্র কুমার সিনহাসহ ১১ জনের বিরুদ্ধে করা মামলার রায় ঘোষণার তারিখ পিছিয়েছে। রায় ঘোষণার নতুন তারিখ ২১ অক্টোবর।</p>
             </div>
             <div class="col-5">
               <amp-img src="img/d11.jpg" layout="responsive" width="16" height="14"></amp-img>
             </div>
           </div>
-          <div class="row mb-2">
-            <h2 class="conh">সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</h2>
+          <div class="row det_mb ">
             <div class="col-7">
+              <h2 class="conh">সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</h2>
               <p class="conp">প্রতারণা ও জালিয়াতির মাধ্যমে ফারমার্স ব্যাংকের (বর্তমানে পদ্মা ব্যাংক) চার কোটি টাকা আত্মসাতের অভিযোগে সাবেক প্রধান বিচারপতি সুরেন্দ্র কুমার সিনহাসহ ১১ জনের বিরুদ্ধে করা মামলার রায় ঘোষণার তারিখ পিছিয়েছে। রায় ঘোষণার নতুন তারিখ ২১ অক্টোবর।</p>
             </div>
             <div class="col-5">
-              <amp-img src="img/d11.jpg"layout="responsive" width="16" height="14"></amp-img>
+              <amp-img src="img/d11.jpg" layout="responsive" width="16" height="14"></amp-img>
             </div>
           </div>
-          <div class="row mb-2">
-            <h2 class="conh">সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</h2>
+          <div class="row det_mb ">
             <div class="col-7">
+              <h2 class="conh">সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</h2>
               <p class="conp">প্রতারণা ও জালিয়াতির মাধ্যমে ফারমার্স ব্যাংকের (বর্তমানে পদ্মা ব্যাংক) চার কোটি টাকা আত্মসাতের অভিযোগে সাবেক প্রধান বিচারপতি সুরেন্দ্র কুমার সিনহাসহ ১১ জনের বিরুদ্ধে করা মামলার রায় ঘোষণার তারিখ পিছিয়েছে। রায় ঘোষণার নতুন তারিখ ২১ অক্টোবর।</p>
             </div>
             <div class="col-5">
-              <amp-img src="img/d11.jpg"layout="responsive" width="16" height="14"></amp-img>
+              <amp-img src="img/d11.jpg" layout="responsive" width="16" height="14"></amp-img>
             </div>
           </div>
-          <div class="row mb-2">
-            <h2 class="conh">সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</h2>
+          <div class="row det_mb ">
             <div class="col-7">
+              <h2 class="conh">সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</h2>
               <p class="conp">প্রতারণা ও জালিয়াতির মাধ্যমে ফারমার্স ব্যাংকের (বর্তমানে পদ্মা ব্যাংক) চার কোটি টাকা আত্মসাতের অভিযোগে সাবেক প্রধান বিচারপতি সুরেন্দ্র কুমার সিনহাসহ ১১ জনের বিরুদ্ধে করা মামলার রায় ঘোষণার তারিখ পিছিয়েছে। রায় ঘোষণার নতুন তারিখ ২১ অক্টোবর।</p>
             </div>
             <div class="col-5">
-              <amp-img src="img/d11.jpg"layout="responsive" width="16" height="14"></amp-img>
+              <amp-img src="img/d11.jpg" layout="responsive" width="16" height="14"></amp-img>
             </div>
           </div>
-          <div class="row mb-2">
-            <h2 class="conh">সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</h2>
+          <div class="row det_mb ">
             <div class="col-7">
+              <h2 class="conh">সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</h2>
               <p class="conp">প্রতারণা ও জালিয়াতির মাধ্যমে ফারমার্স ব্যাংকের (বর্তমানে পদ্মা ব্যাংক) চার কোটি টাকা আত্মসাতের অভিযোগে সাবেক প্রধান বিচারপতি সুরেন্দ্র কুমার সিনহাসহ ১১ জনের বিরুদ্ধে করা মামলার রায় ঘোষণার তারিখ পিছিয়েছে। রায় ঘোষণার নতুন তারিখ ২১ অক্টোবর।</p>
             </div>
             <div class="col-5">
-              <amp-img src="img/d11.jpg"layout="responsive" width="16" height="14"></amp-img>
+              <amp-img src="img/d11.jpg" layout="responsive" width="16" height="14"></amp-img>
             </div>
           </div>
-          <div class="row mb-2">
-            <h2 class="conh">সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</h2>
+          <div class="row det_mb ">
             <div class="col-7">
+              <h2 class="conh">সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</h2>
               <p class="conp">প্রতারণা ও জালিয়াতির মাধ্যমে ফারমার্স ব্যাংকের (বর্তমানে পদ্মা ব্যাংক) চার কোটি টাকা আত্মসাতের অভিযোগে সাবেক প্রধান বিচারপতি সুরেন্দ্র কুমার সিনহাসহ ১১ জনের বিরুদ্ধে করা মামলার রায় ঘোষণার তারিখ পিছিয়েছে। রায় ঘোষণার নতুন তারিখ ২১ অক্টোবর।</p>
             </div>
             <div class="col-5">
-              <amp-img src="img/d11.jpg"layout="responsive" width="16" height="14"></amp-img>
+              <amp-img src="img/d11.jpg" layout="responsive" width="16" height="14"></amp-img>
             </div>
           </div>
-          <div class="row mb-2">
-            <h2 class="conh">সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</h2>
-            <div class="col-7">
-              <p class="conp">প্রতারণা ও জালিয়াতির মাধ্যমে ফারমার্স ব্যাংকের (বর্তমানে পদ্মা ব্যাংক) চার কোটি টাকা আত্মসাতের অভিযোগে সাবেক প্রধান বিচারপতি সুরেন্দ্র কুমার সিনহাসহ ১১ জনের বিরুদ্ধে করা মামলার রায় ঘোষণার তারিখ পিছিয়েছে। রায় ঘোষণার নতুন তারিখ ২১ অক্টোবর।</p>
-            </div>
-            <div class="col-5">
-              <amp-img src="img/d11.jpg"layout="responsive" width="16" height="14"></amp-img>
-            </div>
+          
           </div>
         </div>
       </div>
@@ -85,7 +78,7 @@
     {{-- details 1st part end --}}
     
      {{-- details 2nd part start --}}
-    <div class="container-fluid mt-2 mb-5" style="background-image: url(img/33.jpg);">
+    {{-- <div class="container-fluid mt-2 mb-5" style="background-image: url(img/33.jpg);">
       <div class="container mt-5 mb-5">
         <h2 class="h_c">বাংলাদেশ</h2>
         <div class="row">
@@ -112,10 +105,10 @@
             </div>
         </div>
       </div>
-    </div>
+    </div> --}}
     {{-- details 2nd part end --}}
     {{-- details 3nd part start --}}
-    <div class="container">
+    {{-- <div class="container">
       <div class="row">
         <div class="col-3" style="padding-left: 39px;">
           <h2 class="h_csl_det">সব খবর</h2>
@@ -202,11 +195,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
     {{-- details 3nd part end --}}
     <div class="container first_2">
         <div class="row">
-             <span class="cat_d_h2">আন্তর্জাতিক</span>
+             <span class="cat_d_h2"> বাংলাদেশ সম্পর্কিত আরও পড়ুন</span>
             <div class="col-7">
                 <div class="row">
                     <div class="col-5">
