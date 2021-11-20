@@ -4,7 +4,7 @@
     <section class="content">
       <div class="card-header">
         <h3 class="card-title">Tag List</h3>
-          <a href="{{ route('admin.pages.tag.create') }}" class="btn btn-primary float-right">Add Tag</a>
+          <a href="{{ route('admin.pages.role.create') }}" class="btn btn-primary float-right">Add Role</a>
       </div>
       <!-- /.card-header -->
     
@@ -16,13 +16,13 @@
                 {{ Form::select('per_page', array_combine([5,10,20,40], [5,10,20,40]), $request->per_page, ['class' => 'form-control autoSubmit']) }}
               </div>
               <div class="w-auto mx-2">
-                <a href="{{ route('admin.pages.tag.create') }}" class="btn btn-outline-primary">+ Add Category</a>
+                <a href="{{ route('admin.pages.role.create') }}" class="btn btn-outline-primary">+ Add Role</a>
               </div>
               <div class="w-auto mx-2">
-                <a href="{{ route('admin.pages.tag.list') }}" class="btn btn-outline-secondary btn-sm mt-1"><i class="fa fa-undo"></i>Clear</a>
+                <a href="{{ route('admin.pages.role.list') }}" class="btn btn-outline-secondary btn-sm mt-1"><i class="fa fa-undo"></i>Clear</a>
               </div>
               <div class="w-auto ml-auto">
-                <h3 class="card-title">Showing {{$tags->firstItem()}}-{{$tags->lastItem()}} of {{$tags->total()}} items.</h3>
+                <h3 class="card-title">Showing {{$roles->firstItem()}}-{{$roles->lastItem()}} of {{$roles->total()}} items.</h3>
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@
                 </tr>
               </thead>
               <tbody>  
-                @foreach ($tags as $item)
+                @foreach ($roles as $item)
                   <tr role="row" class="odd">
                     <td class="">{{$item->id}}</td>
                     <td>{{$item->name}}</td>
@@ -63,7 +63,8 @@
             </table>
           </div>
           <div class="card-footer clearfix" style="text-align: center;">
-              {!! $tags->withQueryString()->links('pagination::bootstrap-4') !!}
+              {!! $roles->withQueryString()->links('pagination::bootstrap-4') !!}
+
           </div>
         </div>
         <!-- /.card-body -->

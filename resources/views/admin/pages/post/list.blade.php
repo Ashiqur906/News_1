@@ -12,17 +12,41 @@
       <!-- /.card-header -->
     <section class="content">
       <div class="card">
+        {{ Form::open(['method' => 'GET', 'enctype' => 'multipart/form-data']) }}
+          <div class="card-header">
+            <div class="row px-2">
+              <div class="w-auto">
+                {{ Form::select('per_page', array_combine([5,10,20,40], [5,10,20,40]), $request->per_page, ['class' => 'form-control autoSubmit']) }}
+              </div>
+              <div class="w-auto mx-2">
+                <a href="{{ route('admin.pages.category.create') }}" class="btn btn-outline-primary">+ Add Category</a>
+              </div>
+              <div class="w-auto mx-2">
+                <a href="{{ route('admin.pages.category.list') }}" class="btn btn-outline-secondary btn-sm mt-1"><i class="fa fa-undo"></i>Clear</a>
+              </div>
+              <div class="w-auto ml-auto">
+                <h3 class="card-title">Showing {{$categoty2s->firstItem()}}-{{$categoty2s->lastItem()}} of {{$categoty2s->total()}} items.</h3>
+              </div>
+            </div>
+          </div>
         <div class="card-body">
           <table class="table table-bordered table-hover">
             <thead>
               <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Media Type</th>
+                <th>Post Type</th>
                 <th>Release Date</th>
                 <th>Landscape Image</th>
                 <th>Portrait Image</th>
                 <th>Action</th>
+              </tr>
+              <tr>
+                <th><input type="number" name="id" class="form-control autoSubmit" value="{{$request->id}}"></th>
+                <th><input type="text" name="name" class="form-control autoSubmit" value="{{$request->name}}"></th>
+                <th><input type="text" name="name" class="form-control autoSubmit" value="{{$request->name}}"></th>
+                <th><input type="text" name="name" class="form-control autoSubmit" value="{{$request->name}}"></th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -51,3 +75,4 @@
     </section>
   </div>
 @endsection
+

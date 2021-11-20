@@ -2,12 +2,12 @@
 <div class="foot_part1">
     <div class="container">
       <div class="row">
-        <div class=" col-3 foot_logo ">
-          <amp-img src="img/bbc_bangla.PNG" layout="responsive" class="logo_img_foot" width="150px" height="65px" style="margin-left: -12px;"></amp-img>
+        <div class=" col-2 foot_logo pt-5">
+          <amp-img src="img/bbc_bangla.PNG" layout="responsive" class="logo_img_foot" width="16" height="9" style="margin-left: -12px; width: 204px; height: 82px;"></amp-img>
         </div>
-        <div class="col-6 m_b" >
+        <div class="col-7 m_b1" >
           <div class="row">
-            <div class="col-8">
+            <div class="col-8 mt-3">
               <form class="sample-form" method="GET" action="/documentation/examples/api/submit-form" target="_top">
                 <input type="search" placeholder="Search..." name="search">
                 <input type="submit" value="search">
@@ -16,7 +16,7 @@
               <p class="logo_foot_taxt" [text]="'Hello ' + foo"> ঢাকা, বুধবার, ২৯ সেপ্টেম্বর ২০২১ | ১৪ আশ্বিন ১৪২৮ বঙ্গাব্দ</p>
           </div>
         </div>
-          <div class="col-3 m_b">
+          <div class="col-3 m_b2">
             <amp-social-share
                                   class="round mr1"
                                   type="facebook"
@@ -50,7 +50,7 @@
           </div>
       </div>
       <div class="row">
-        <div class="col-4 foot_menu">
+        <div class="col-4 foot_last">
           <ul>
               <li>
                 <a href="#">বাংলাদেশ</a>

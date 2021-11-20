@@ -102,21 +102,44 @@
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-chart-pie"></i>
                 <p>
-                  News
+                  Role
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="pages/charts/chartjs.html" class="nav-link">
+                  <a href="{{ route('admin.pages.role.create')}}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Add News </p>
+                    <p>Add Role </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('admin.pages.news.list') }}" class="nav-link">
+                  <a href="{{ route('admin.pages.role.list') }}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>List News</p>
+                    <p>List Role</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-chart-pie"></i>
+                <p>
+                  Post
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ route('admin.pages.post.create') }}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Add Post </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ route('admin.pages.post.list') }}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List Post</p>
                   </a>
                 </li>
               </ul>
@@ -173,9 +196,8 @@
 </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="">
     <!-- Content Header (Page header) -->
-    <div class="content-header">
+    {{-- <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
@@ -202,5 +224,5 @@
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+    </div> --}}
+  <!-- /.content-header -->

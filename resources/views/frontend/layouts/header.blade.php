@@ -102,38 +102,37 @@
     </div>
   </div>
   <!-- logo part end -->
-  <div class="P_part">
-    <div class="container">
-      <div class="row">
-        <div class="col-10">
-          <div class="row">
-               <div class="col-2">
-                 <div class="row">
-                    <div class="col-2"
-                      role="button"
-                      aria-label="open sidebar"
-                      on="tap:header-sidebar.toggle"
-                      tabindex="0"
-                      class="ampstart-navbar-trigger pr2"
-                      style="margin-top: -6px; font-size: 25px;"
-                      >
-                      ☰
-                    </div>
-                    <div class="col-10">
-                      <span class="ajnews">আজকের সংবাদ </span>
-                    </div>
-                 </div>
-               </div>
+    <div class="P_part">
+      <div class="container">
+         <div class="row">
+            <div class="col-2">
+              <div class="row">
+                <div class="col-2"
+                  role="button"
+                  aria-label="open sidebar"
+                  on="tap:header-sidebar.toggle"
+                  tabindex="0"
+                  class="ampstart-navbar-trigger pr2"
+                  style="margin-top: -6px; font-size: 25px;"
+                  >
+                  ☰
+                </div>
+                <div class="col-10">
+                  <span class="ajnews">আজকের সংবাদ </span>
+                </div>
+              </div>
+            </div>
             {{-- marquee --}}
-            <div class="col-10">
-              {{-- New --}}
+            {{-- <div class="col-10">
               <div class="slide-marquee">
                 <ul class="ul-list spot-anim">
                   <li class="li-list flex">
                       <div class="list-alert-spinner">
+                        <marquee>
                           <div class="double-bounce"></div>
+                          <a href=""> বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক </a>
                       </div>
-                    <a href=""> বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক </a>
+                    </marquee>
                   </li>
                   <li class="li-list flex">
                     <div class="list-alert-spinner">
@@ -193,54 +192,22 @@
                   </li>
                 </ul>
               </div>
-              {{-- New End --}}
-              {{-- <div class="col-12">
-                <span>You spin me right round, baby. Like a record, baby.</span>
-                <span>You spin me right round, baby. Like a record, baby.</span>
-              </div> --}}
+            </div> --}}
+            <div class="col-10 marbg">
+              <marquee >
+                 <a href="#" style="color:white;">⦿ বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক</a>
+                 <a href="#" style="margin-left: 50px; color:white;">⦿ ঢাবিতে কাল থেকে টিকাদান শুরু</a>
+                 <a href="#" style="margin-left: 50px; color:white;">⦿ সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</a>
+                </marquee>
             </div>
-          </div>
-        </div>
-        {{-- <div class="col-2 so-icon">
-          <amp-social-share
-                                class="round mr1"
-                                type="facebook"
-                                width="27"
-                                height="27"
-
-                                data-param-app_id="563400841004160"
-                        >
-                        </amp-social-share>
-                        <amp-social-share
-                                class="circle mr1"
-                                type="twitter"
-                                width="27"
-                                height="27"
-                        >
-                        </amp-social-share>
-                        <amp-social-share
-                                class="circle mr1"
-                                type="whatsapp"
-                                width="27"
-                                height="27"
-                        >
-                        </amp-social-share>
-                        <amp-social-share
-                                class="circle mr1"
-                                type="linkedin"
-                                width="27"
-                                height="27"
-                        >
-                        </amp-social-share>
-        </div> --}}
+         </div>
       </div>
     </div>
-  </div>
   <!-- top header part end -->
   <!-- menu part start -->
   <div class="P_part1">
     <div class="container">
-      <amp-mega-menu height="30" layout="fixed-height">
+      <amp-mega-menu height="30" layout="fixed-height" class="pt-3">
         <nav class="bgnav">
           <ul style="display: flex; justify-content: space-between; flex-wrap: wrap; flex-direction: row;">
               {{-- <a style="color: white; font-size: 23px; margin-left: -35px;" href="http://127.0.0.1:8000/">&#8962;</a> --}}
@@ -248,9 +215,9 @@
               <span role="button">সর্বশেষ</span>
                 <div role="dialog" style="background-color: #000104; width: 15%; width: 15%; margin-top: 6px;">
                   <ol>
-                    <li style="display: block;"><a href="#">আন্তর্জাতিক</a></li>
-                    <li style="display: block;"><a href="#">বিনোদন</a></li>
-                    <li style="display: block;"><a href="#">খেলা</a></li>
+                    <li style="display: block; text-decoration: none;"><a href="#">আন্তর্জাতিক</a></li>
+                    <li style="display: block; text-decoration: none;"><a href="#">বিনোদন</a></li>
+                    <li style="display: block; text-decoration: none;"><a href="#">খেলা</a></li>
                   </ol>
                 </div>
             </li>

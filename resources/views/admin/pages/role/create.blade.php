@@ -23,12 +23,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="">Tag</h1>
+            <h1 class="">Role</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a style="color: white;" href="{{url('/')}}">Home</a></li>
-              <li class="breadcrumb-item active">tag</li>
+              <li class="breadcrumb-item active">Role</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -46,15 +46,24 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Add Tag</h3>
+                <h3 class="card-title">Add Role</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              {!! Form::open(['method' => 'POST', 'route' => 'tag.store', 'enctype' => 'multipart/form-data']) !!} 
-              {{ Form::model($fdata, ['route' => ['admin.pages.tag.create']]) }}
+              {!! Form::open(['method' => 'POST', 'route' => 'role.store', 'enctype' => 'multipart/form-data']) !!} 
+              {{ Form::model($fdata, ['route' => ['admin.pages.role.create']]) }}
                 <div class="card-body">
                   <div class="form-group">
-                    {{ Form::label('name', 'Title') }}
+                    {{ Form::label('title', 'Title') }}
+                    {{ Form::text('title', !empty($fdata->title) ? $fdata->title : null, ['id' => 'title', 'class' => $errors->has('title') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Title']) }}
+                    @error('title')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                  </div>                  
+                  <div class="form-group">
+                    {{ Form::label('name', 'Name') }}
                     {{ Form::text('name', !empty($fdata->name) ? $fdata->name : null, ['id' => 'name', 'class' => $errors->has('name') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Name']) }}
                     @error('name')
                         <span class="invalid-feedback" role="alert">
@@ -63,22 +72,30 @@
                     @enderror
                   </div>
                   <div class="form-group">
-                    {{ Form::label('Slug', 'Slug') }}
-                    {{ Form::text('slug', !empty($fdata->slug) ? $fdata->slug : null, ['id' => 'slug', 'class' => $errors->has('slug') ? 'form-control is-invalid' : 'form-control','placeholder' => 'Slug']) }}
-                    @error('slug')
+                    {{ Form::label('sort_by', 'Position') }}
+                    {{ Form::number('sort_by', !empty($fdata->sort_by) ? $fdata->sort_by : null, ['id' => 'sort_by', 'class' => $errors->has('sort_by') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Title']) }}
+                    @error('sort_by')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
-                    @enderror  
+                    @enderror
+                  </div>
+                  <div class="form-group">
+                        
+                    {{ Form::checkbox('is_important', '1', (!empty($fdata->is_important) ? $fdata->is_important : false), ['id' => 'is_important']) }}
+                    {{ Form::label('is_important', 'Is Important?') }}
+                  </div>
+            
+                  <div class="form-group">
+                  
+                        {{ Form::checkbox('is_character', '1', (!empty($fdata->is_character) ? $fdata->is_character : false), ['id' => 'is_character']) }}
+                        {{ Form::label('is_character', 'Is Character?') }}
                   </div>
                 </div>
-                  <div class="form-check ml-4 mb-3">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">is active</label>
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
+
                 {!! Form::close() !!}
             </div>
             <!-- /.card -->
@@ -97,7 +114,7 @@
       new Vue({
         mounted() {
         var name = document.getElementById("name");
-        var slug = document.getElementById("slug");
+        var slug = document.getElementById("title");
         name.addEventListener("change", function () {
           slug.value = name.value.toLowerCase().replaceAll(" ", "-");
           name.value = name.value.toLowerCase().split(' ').map(s => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');

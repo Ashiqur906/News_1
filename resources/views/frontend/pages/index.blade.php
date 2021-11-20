@@ -263,9 +263,9 @@
     </div>
     <!-- main part 2 end-->
     <!-- main part 3 start-->
-    <div class="container-fluid mt-2 mb-5" style="background-image: url(img/33.jpg);">
+    <div class="container-fluid mt-2 mb-5" style="background-color: aliceblue">
       <div class="container mt-5 mb-5">
-        <h2 class="h_c " style="margin-left: -11px;">বিনোদন</h2>
+        <h2 class="h_c" style="margin-left: -11px; padding-top:36px;">বিনোদন</h2>
         <div class="row">
           <div class="col-4 ">
               <amp-img src="img/44.jpg" layout="responsive" width="16" height="9"></amp-img>
