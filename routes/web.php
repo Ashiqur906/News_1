@@ -62,6 +62,15 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/role/update/', [App\Http\Controllers\RoleController::class, 'update'])->name('role.update')->middleware('auth');
     Route::get('/role/delete/{id}', [App\Http\Controllers\RoleController::class, 'delete'])->middleware('auth');
 
+    // moderator 
+
+    Route::get('/moderator', [App\Http\Controllers\ModeratorController::class, 'index'])->name('admin.pages.moderator.list')->middleware('auth');
+    Route::get('/moderator/add', [App\Http\Controllers\ModeratorController::class, 'add'])->name('admin.pages.moderator.create')->middleware('auth');
+    Route::post('/moderator/add', [App\Http\Controllers\ModeratorController::class, 'store'])->name('moderator.store')->middleware('auth');
+    Route::get('/moderator/edit/{id}', [App\Http\Controllers\ModeratorController::class, 'edit'])->name('moderator.edit')->middleware('auth');
+    Route::post('/moderator/update/', [App\Http\Controllers\ModeratorController::class, 'update'])->name('moderator.update')->middleware('auth');
+    Route::get('/moderator/delete/{id}', [App\Http\Controllers\ModeratorController::class, 'delete'])->middleware('auth');
+
     // news 
     // Route::get('/post/list', [App\Http\Controllers\PostController::class, 'postList'])->name('admin.pages.post.list')->middleware('auth');
 

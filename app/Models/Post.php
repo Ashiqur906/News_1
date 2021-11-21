@@ -8,4 +8,28 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name', 'slug', 'post_type', 'ratings', 'release_date', 'run_time', 'website', 'company', 'description', 'link', 'potraitimage', 'landscapeimage', 'created_by', 'modified_by',
+        'remarks', 'sort_by', 'is_active', 'modified_by',  'parent_id', 'related_post',  'news_location', 'country_origin', 'language'
+    ];
+
+    public function post()
+    {
+        return $this->belongsTo(post::class, 'parent_id');
+    } 
+
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category2::class, 'post_category');
+    }
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, 'post_tag');
+    }
+
+    public function relatedpost()
+    {
+        return $this->belongsToMany(post::class, 'post_relations', 'post_id', 'related_post_id');
+    }
 }
