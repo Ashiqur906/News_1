@@ -146,6 +146,29 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-chart-pie"></i>
+                <p>
+                  Moderator
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ route('admin.pages.moderator.create')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Add Moderator </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ route('admin.pages.moderator.list') }}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List Moderator</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
                 <i class="nav-icon far fa-image"></i>
                 <p>
                   Gallery

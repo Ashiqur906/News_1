@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PostFV;
+use App\Models\Role;
 use App\Models\Post;
+use App\Models\Categoty2;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -22,8 +24,8 @@ class PostController extends Controller
 	    if($request->name) {
 	    	$queryWhere[] = ['name', 'LIKE', '%'.$request->name.'%'];
 	    }
-	    if($request->name) {
-	    	$queryWhere[] = ['name', 'LIKE', '%'.$request->name.'%'];
+	    if($request->title) {
+	    	$queryWhere[] = ['title', 'LIKE', '%'.$request->title.'%'];
 	    }
 	    if($request->per_page) {
 	    	$per_page = $request->per_page;
@@ -40,7 +42,7 @@ class PostController extends Controller
     {
         $posts = Post::orderBy('id', 'desc')->get();
         $role = Role::orderBy('sort_by', 'ASC')->get();
-        $people = Entity::orderBy('id', 'desc')->get();
+        // $people = Entity::orderBy('id', 'desc')->get();
         $category = Categoty2::orderBy('id', 'desc')->get();
         $fdata = new Post();
         // dd($role);
@@ -50,10 +52,10 @@ class PostController extends Controller
             'fdata'             => $fdata,
             'mdata'             => null,
             'category'          => $category,
-            'people'            => $people,
-            'post'              => $post,
-            'role'              => $role,
-            'add_by'            => $fdata->getEntitiesByRole(1),
+            // 'people'            => $people,
+            'post'              => $posts,
+            // 'role'              => $role,
+            // 'add_by'            => $fdata->getEntitiesByRole(1),
         ]);
         //return view('admin.pages.movie.create', compact('category'));
     }
@@ -127,13 +129,6 @@ class PostController extends Controller
 
                 $entities = $this->mergeArrays(
                     $request->casts,
-                    // $request->producers,
-                    // $request->directors,
-                    // $request->writers,
-                    // $request->musicians,
-                    // $request->cinematographers,
-                    // $request->distributors,
-                    // $request->screenplay
                 );
                 // dd([$request->request, $entities]);
                 $existing->entity()->sync($entities);
