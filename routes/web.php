@@ -28,6 +28,7 @@ Route::get('/', function () {
 Route::get('/details', [App\Http\Controllers\DetailController::class, 'details'])->name('frontend.pages.details');
 Route::get('/category', [App\Http\Controllers\CategoryController::class, 'category'])->name('frontend.pages.category');
 
+
 // backend 
 
 Route::group(['prefix' => 'admin'], function () {

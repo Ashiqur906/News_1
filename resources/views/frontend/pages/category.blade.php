@@ -105,7 +105,17 @@
     <div class="container">
         <div class="row">
             <div class="col-7">
-                <h2 class="dh_2_cat">ভিডিও সংবাদ</h2>
+              <h2 class="dh_2_cat">ভিডিও সংবাদ</h2>
+                 @for($x = 1; $x <= 2; $x++)
+                    @include('frontend.widgets.video_carousel', ['data' => [
+                    'video' => 'https://www.youtube.com/embed/SOK_4j69wus',
+                    'title' => 'উইকএন্ড যখন ইউরোপের জায়ান্টরা নম্র ছিল',
+                    'details' => 'বলিউডি সিনেমায় প্রেম তো অবিচ্ছেদ্য। আর সেলুলয়েড পর্দায় প্রেমের কথা এলেই মনে ভাসে সেরা কিছু জুটির কথা। প্রেমের ছবির দুর্দান্ত অনস্ক্রিন রসায়ন বললে তো জুটির কথা আসবেই'
+                    ]])
+                  @endfor
+
+
+                {{-- <h2 class="dh_2_cat">ভিডিও সংবাদ</h2>
                    <h3 class="videoh3">‘রোহিঙ্গা ক্যাম্পে অস্থিরতা তৈরিতে অস্ত্র আসছে মিয়ানমার থেকে’</h3>
                     <amp-carousel width="718px" height="404px" layout="responsive" type="slides" style="width: 718px; height: 404px;">
                         <amp-iframe title="Video of Sintel, an independently produced short film" width="718px" height="404px" layout="responsive" sandbox="allow-scripts allow-same-origin allow-popups" allowfullscreen frameborder="0" src="https://www.youtube.com/embed/SOK_4j69wus">
@@ -114,7 +124,7 @@
                         </amp-iframe>
                         <amp-iframe title="Video of Sintel, an independently produced short film" width="718px" height="404px" layout="responsive" sandbox="allow-scripts allow-same-origin allow-popups" allowfullscreen frameborder="0" src="https://www.youtube.com/embed/SOK_4j69wus">
                         </amp-iframe>
-                    </amp-carousel>
+                    </amp-carousel> --}}
 
                     <div class="row">
                       <h2 class="dh_2_cat mt-5">এ সম্পর্কিত সংবাদ</h2>

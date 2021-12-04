@@ -20,9 +20,14 @@
  </div>
  <nav class="ampstart-sidebar-nav ampstart-nav ">
    <ul class="list-reset m0 p0 ampstart-label" style="color:black;">
-       <li class="ampstart-nav-item">
-         <a class="ampstart-nav-link" href="#">বাংলাদেশ</a>
-       </li>
+        {{-- @foreach ($category as $list) 
+          <li class="ampstart-nav-item">
+            <a class="ampstart-nav-link" href="#">{{$list->name}}</a>
+          </li>
+        @endforeach --}}
+        <li class="ampstart-nav-item">
+          <a class="ampstart-nav-link" href="#">বাংলাদেশ</a>
+        </li>
        <li class="ampstart-nav-item">
          <a class="ampstart-nav-link" href="#">আন্তর্জাতিক</a>
        </li>

@@ -1,55 +1,52 @@
 @extends('master')
 @section('content')
-<!-- main part 1 right start-->
+<!-- main part 1 right start box_one-->
 <div class="container first_1">
     <div class="row">
     <div class="col-9">
       <h2 class="h_c">প্রচ্ছদ</h2>
       <div class="row">
-        <div class="col-6 ">
-          <amp-img src="img/11.jpg" width="16" height="9" layout="responsive" alt="Example logo image"></amp-img>
-          <div class= "cont_1" >
-              <h3 class="h_c4">বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক</h3>
-              <p class="ptext">বৈশ্বিক মহামারি করোনাভাইরাসের সংক্রমণ ও মৃত্যু কিছুটা কমেছে। গত একদিনে সারাবিশ্বে এ ভাইরাসে চার হাজার ৬২৫ জনের মৃত্যু হয়েছে।  আগামীকাল সকাল  কর্মসূচি শুরু</p>
-          </div>
-        </div>
-        <div class="col-6 ">
-          <amp-img src="img/22.jpg" width="16" height="9" layout="responsive" alt="Example logo image"></amp-img>
-          <div class= "cont_1" >
-              <h3 class="h_c4">ঢাবিতে কাল থেকে টিকাদান শুরু</h3>
-              <p class="ptext">আজ রোববার বিশ্ববিদ্যালয়ের জনসংযোগ দপ্তর এ তথ্য জানিয়েছে। জনসংযোগ বিভাগের পরিচালক মাহমুদ আলমের স্বাক্ষরিত সংবাদ বিজ্ঞপ্তিতে জানানো হয়েছে, আগামীকাল সকাল  কর্মসূচি শুরু হবে।</p>
-          </div>
-        </div>
-      </div> 
-      <div class="row">
-        <div class="col-6  mt-2">
-          <amp-img src="img/99.jpg" width="16" height="9" layout="responsive" alt="Example logo image"></amp-img>
-          <div class= "cont_1" >
-              <h3 class="h_c4">চলতি মাসেই খুলবে সব বিশ্ববিদ্যালয় : মন্ত্রিপরিষদ সচিব</h3>
-              <p class="ptext">চলতি মাসের মধ্যে সব বিশ্ববিদ্যালয় খুলে দেওয়া হবে বলে জানিয়েছেন মন্ত্রিপরিষদ সচিব খন্দকার আনোয়ারুল ইসলাম। ৪ অক্টোবর সোমবার অনুষ্ঠিত । আগামীকাল সকাল  কর্মসূচি শুরু </p>
-          </div>
-        </div>
-        <div class="col-6  mt-2">
-          <amp-img src="img/10.jpg" width="16" height="9" layout="responsive" alt="Example logo image"></amp-img>
-          <div class= "cont_1" >
-              <h3 class="h_c4">‘রোহিঙ্গা ক্যাম্পে অস্থিরতা তৈরিতে অস্ত্র আসছে মিয়ানমার থেকে’</h3>
-              <p class="ptext">স্বরাষ্ট্রমন্ত্রী আসাদুজ্জামান খাঁন কামাল বলেছেন, আশ্রয় শিবিরের আইনশৃঙ্খলা পরিস্থিতি যথেষ্ট ভালো। রোহিঙ্গা নেতা মোহাম্মদ মুহিবুল্লাহর হত্যাকারীদের শিগগিরই</p>
-          </div>
-        </div>
-      </div>
+        <!-- widgets box_one start-->
+        @for($x = 1; $x <= 1; $x++)
+          @include('frontend.widgets.box_one', ['data' => [
+            'img' => 'img/11.jpg',
+            'title' => 'বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক',
+            'details' => 'বৈশ্বিক মহামারি করোনাভাইরাসের সংক্রমণ ও মৃত্যু কিছুটা কমেছে। গত একদিনে সারাবিশ্বে এ ভাইরাসে চার হাজার ৬২৫ জনের মৃত্যু হয়েছে।  আগামীকাল সকাল  কর্মসূচি শুরু'
+
+          ]])
+        @endfor
+          @include('frontend.widgets.box_one', ['data' => [
+            'img' => 'img/22.jpg',
+            'title' => 'ঢাবিতে কাল থেকে টিকাদান শুরু',
+            'details' => 'আজ রোববার বিশ্ববিদ্যালয়ের জনসংযোগ দপ্তর এ তথ্য জানিয়েছে। জনসংযোগ বিভাগের পরিচালক মাহমুদ আলমের স্বাক্ষরিত সংবাদ বিজ্ঞপ্তিতে জানানো হয়েছে, আগামীকাল সকাল  কর্মসূচি শুরু হবে।'
+  
+          ]])
+           @include('frontend.widgets.box_one', ['data' => [
+            'img' => 'img/99.jpg',
+            'title' => 'চলতি মাসেই খুলবে সব বিশ্ববিদ্যালয় : মন্ত্রিপরিষদ সচিব',
+            'details' => 'চলতি মাসের মধ্যে সব বিশ্ববিদ্যালয় খুলে দেওয়া হবে বলে জানিয়েছেন মন্ত্রিপরিষদ সচিব খন্দকার আনোয়ারুল ইসলাম। ৪ অক্টোবর সোমবার অনুষ্ঠিত । আগামীকাল সকাল  কর্মসূচি শুরু '
+  
+          ]])
+           @include('frontend.widgets.box_one', ['data' => [
+            'img' => 'img/10.jpg',
+            'title' => '‘রোহিঙ্গা ক্যাম্পে অস্থিরতা তৈরিতে অস্ত্র আসছে মিয়ানমার থেকে’',
+            'details' => 'স্বরাষ্ট্রমন্ত্রী আসাদুজ্জামান খাঁন কামাল বলেছেন, আশ্রয় শিবিরের আইনশৃঙ্খলা পরিস্থিতি যথেষ্ট ভালো। রোহিঙ্গা নেতা মোহাম্মদ মুহিবুল্লাহর হত্যাকারীদের শিগগিরই'
+  
+          ]])
     </div>
+  </div>
     <!-- main part 1 right end-->
     <!-- main part 1 left start-->
     <div class="col-3">
       <h2 class="h_csl">সব খবর</h2>
         <div class="row mb-2 slide_text_1">
-          <div class="col-5">
-            <amp-img src="img/22.jpg" layout="responsive" width="16" height="16"></amp-img>
-          </div>
-          <div class="col-7 slide_text">
-            <h3>বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক</h3>
-            <p>বৈশ্বিক মহামারি করোনাভাইরাসের সংক্রমণ ও মৃত্যু কিছুটা কমেছে। গত একদিনে সারাবিশ্বে এ ভাইরাসে চার হাজার ৬২৫ জনের মৃত্যু হয়েছে।  আগামীকাল সকাল  কর্মসূচি শুরু</p>
-          </div>
+          @for($x = 1; $x <= 1; $x++)
+              @include('frontend.widgets.box_two', ['data' => [
+                'img' => 'img/33.jpg',
+                'title' => 'বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক',
+                'details' => 'বৈশ্বিক মহামারি করোনাভাইরাসের সংক্রমণ ও মৃত্যু কিছুটা কমেছে। গত একদিনে সারাবিশ্বে এ ভাইরাসে চার হাজার ৬২৫ জনের মৃত্যু হয়েছে।  আগামীকাল সকাল  কর্মসূচি শুরু'
+              ]])
+            @endfor
         </div>
         <div class="row mb-2 slide_text_1">
           <div class="col-5">
@@ -223,42 +220,13 @@
     <div class="container mb-5">
       <h2 class="h_c">ভিডিও সংবাদ</h2>
       <div class="row">
-        <div class="col-4">
-          <h3 class="videoh3">বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক</h3>
-          <amp-iframe
-              width="300px"
-              height="250px"
-              sandbox="allow-scripts allow-same-origin"
-              layout="responsive"
-              frameborder="0"
-              src="https://www.youtube.com/embed/SOK_4j69wus"
-            >
-          </amp-iframe>
-        </div>
-        <div class="col-4">
-          <h3 class="videoh3">ঢাবিতে কাল থেকে টিকাদান শুরু</h3>
-          <amp-iframe
-              width="300px"
-              height="250px"
-              sandbox="allow-scripts allow-same-origin"
-              layout="responsive"
-              frameborder="0"
-              src="https://www.youtube.com/embed/SOK_4j69wus"
-            >
-          </amp-iframe>
-        </div>
-        <div class="col-4">
-          <h3 class="videoh3">‘রোহিঙ্গা ক্যাম্পে অস্থিরতা তৈরিতে অস্ত্র আসছে মিয়ানমার থেকে’</h3>
-          <amp-iframe
-              width="300px"
-              height="250px"
-              sandbox="allow-scripts allow-same-origin"
-              layout="responsive"
-              frameborder="0"
-              src="https://www.youtube.com/embed/SOK_4j69wus"
-            >
-          </amp-iframe>
-        </div>
+        {{-- video widgets  --}}
+          @for($x = 1; $x <= 3; $x++)
+                @include('frontend.widgets.video_widgets', ['data' => [
+                  'title' => 'বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক',
+                  'video' =>'https://www.youtube.com/embed/SOK_4j69wus'
+                ]])
+          @endfor
       </div>
     </div>
     <!-- main part 2 end-->
