@@ -13,13 +13,18 @@
     font-size: 20px;
    }
    .logop{
-    background-color: #4267b2;
+    background-color: #ffffff;
     color: white;
     padding: 10px;
     height: auto;
     margin-top: 102px;
     margin-bottom: 25px;
 
+   }
+
+   .so-icon {
+    margin-top: 30px;
+    text-align: center;
    }
    .social_icon{
     float: right;

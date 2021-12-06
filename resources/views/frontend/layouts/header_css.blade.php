@@ -345,6 +345,31 @@
 .gy-5 {
   --bs-gutter-y: 3rem;
 }
+/* custom border  */
+.border_left{
+  border-left: 1px solid #cdcccc;
+}
+.border_right{
+  border-right: 1px solid #cdcccc;
+}
+.border_bottom{
+  border-bottom: 1px solid #cdcccc;
+}
+.h_left{
+    font-size: 2rem;
+    border-bottom: 1px solid #cdcccc;
+    margin-top: -10px;
+  }
+
+  .text_content{
+    padding-right: 10px; 
+    text-align: justify;
+  }
+
+  .time_span{
+  font-size: 11px;
+  }
+
 
 @media (min-width: 576px) {
   .col-sm {
@@ -5075,7 +5100,7 @@
  
    /*top_part start*/
    .first_1{
-    margin-top: 185px;
+    /* margin-top: 185px; */
    }
    .first_2{
     margin-top: 37px;
@@ -5085,7 +5110,6 @@
     color: white;
     padding-top: 15px;
     margin-bottom: -22px;
-    margin-top: 29px;
    }
    .P_part1{
     background-color: #000000;
@@ -5105,7 +5129,7 @@
 
    }
    .logo_p_taxt{
-    margin-top: 37px;
+    margin-top: 10px;
     font-size: 12px;
    }
   .so-icon{
@@ -5186,20 +5210,21 @@
 
 
   .foot_copy{
-    background-color: #b80000;
+    background-color: #000000;
     padding: 20px 0px 20px 0px;
     text-align: center;
     font-family: monospace;
+    color: white;
   }
 
   .foot_part1{
-    background-color:#000000;
-    color: white;
+    background-color:#f6f6f6;
+    color: black;
     margin-top: 22px;
    }
   .foot_menu{
     margin-top: 37px;
-    border-left: 1px solid #b80000;
+    border-left: 1px solid #cdcccc;
     margin-bottom: 34px;
   }
   .foot_menu ul li a{
@@ -5208,7 +5233,7 @@
   }
   .foot_part2{
     margin-top: 37px;
-    border-left: 1px solid #b80000;
+    border-left: 1px solid #cdcccc;
     margin-bottom: 30px;
     text-decoration: none;
   }
@@ -5222,18 +5247,18 @@
   }
   .foot_part2 p a{
   
-     color: white;
+     color: black;
      margin-bottom: 0px;
      text-decoration: none;
      margin-left: 40px;
   }
   .foot_last{
     margin-top: 37px;
-    border-left: 1px solid #b80000;
+    border-left: 1px solid #cdcccc;
     margin-bottom: 34px;
   }
   .foot_last ul li a{
-    color: white;
+    color: black;
     text-decoration: none;
   }
 .foot_last ul{
@@ -5267,6 +5292,10 @@
     border-bottom: 3px solid red;
     margin-left: -15px;
     margin-right: -16px;
+  }
+  .h_aaa{
+    font-size: 2rem;
+    border-bottom: 3px solid red
   }
 
 /*content part বিনোদন start */
