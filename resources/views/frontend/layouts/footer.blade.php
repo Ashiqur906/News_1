@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class=" col-2 foot_logo pt-5">
-          <amp-img src="img/bbc_bangla.PNG" layout="responsive" class="logo_img_foot" width="16" height="9" style="margin-left: -12px; width: 204px; height: 82px;"></amp-img>
+          <amp-img src="img/palo-bangla.svg" layout="responsive" class="logo_img_foot" width="16" height="9" style="margin-left: -12px; width: 204px; height: 82px;"></amp-img>
         </div>
         <div class="col-7 m_b1" >
           <div class="row">

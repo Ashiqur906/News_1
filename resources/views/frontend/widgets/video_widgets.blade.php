@@ -1,5 +1,6 @@
 {{-- video widgets  --}}
-<div class="col-4">
+
+  <div class="col-6">
     <h3 class="videoh3">{{$data['title']}}</h3>
     <amp-iframe
         width="300px"
