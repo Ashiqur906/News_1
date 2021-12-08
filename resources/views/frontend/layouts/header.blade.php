@@ -119,21 +119,7 @@
       <div class="container">
          <div class="row">
             <div class="col-2">
-              <div class="row">
-                <div class="col-2"
-                  role="button"
-                  aria-label="open sidebar"
-                  on="tap:header-sidebar.toggle"
-                  tabindex="0"
-                  class="ampstart-navbar-trigger pr2"
-                  style="margin-top: -6px; font-size: 25px;"
-                  >
-                  ☰
-                </div>
-                <div class="col-10">
-                  <span class="ajnews">আজকের সংবাদ </span>
-                </div>
-              </div>
+                <span class="ajnews">আজকের সংবাদ </span>
             </div>
             <div class="col-10 marbg">
               <marquee >

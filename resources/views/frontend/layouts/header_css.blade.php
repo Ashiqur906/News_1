@@ -13,6 +13,7 @@
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
     <!-- Import other AMP Extensions here -->
     
     
@@ -345,6 +346,8 @@
 .gy-5 {
   --bs-gutter-y: 3rem;
 }
+
+
 /* custom border  */
 .border_left{
   border-left: 1px solid #cdcccc;
@@ -369,6 +372,13 @@
   .time_span{
   font-size: 11px;
   }
+
+
+  /* custom mergin  */
+  .mar_left{
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
 
 
 @media (min-width: 576px) {
@@ -5179,7 +5189,7 @@
   }
   .slide_text p{
     color: #6060608f;
-    font-size: 11px;
+    font-size: 15px;
     white-space: normal;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -5193,6 +5203,41 @@
     line-height: 1.0rem;
     letter-spacing: .0071428571em;
     margin-left: -14px;
+   
+  }
+  .slide_text_large h3{
+    font-size: 20px;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    color: rgb(2 0 0);
+    line-height: 1.2;
+    flex: 1 1 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: SolaimanLipi,AdorshoLipi,voice;
+    font-weight: 400;
+    line-height: 1.4rem;
+    letter-spacing: .0071428571em;
+    
+  }
+  .slide_text_large p{
+    color: #6060608f;
+    font-size: 18px;
+    white-space: normal;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    line-height: 1.2;
+    flex: 1 1 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: SolaimanLipi,AdorshoLipi,voice;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: .0071428571em;
+    text-align: justify;
    
   }
   /*slide_bar start*/
@@ -5269,7 +5314,7 @@
   
   /*start content part 1*/
   .cont_1{
-    background-color: #ededed82;
+    
     padding: 8px;
     margin-bottom: 15px;
     height: 140px;
@@ -5284,25 +5329,25 @@
   .h_c{
     font-size: 2rem;
     padding: 2px;
-    border-bottom: 3px solid red;
+    border-bottom: 1px solid #e2e2e2;
   }
   .h_csl{
     font-size: 2rem;
     padding: 2px;
-    border-bottom: 3px solid red;
+    border-bottom: 1px solid #e2e2e2;
     margin-left: -15px;
     margin-right: -16px;
   }
   .h_aaa{
     font-size: 2rem;
-    border-bottom: 3px solid red
+    border-bottom: 1px solid #e2e2e2;
   }
 
 /*content part বিনোদন start */
 .cont_2{
-    background-color: #f6f6f6;
+    /* background-color: #f6f6f6; */
     padding: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 7px;
 
   }
   .cont_2:hover{
@@ -5327,11 +5372,11 @@
     font: bold; 
     font-size: 20px; 
     color: #060000; 
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid #e2e2e2;
   }
   .ptext{
     white-space: normal;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     color: rgba(0,0,0,.6);
@@ -5360,7 +5405,7 @@
     font: bold; 
     font-size: 20px; 
     color: white;
-    border-bottom: 2px solid red;
+    border-bottom: 1px solid #e2e2e2;
 
      }
 /*content part বিনোদন end */
@@ -5375,7 +5420,7 @@
   margin-right: 5px;
 }
 .part_6_con{
-  width: 423px;
+  width: 327px;
   height: 294px;
   margin-bottom: 23px;
   display: flex;
@@ -5403,9 +5448,14 @@
 .test_p6{
   margin-top: 224px;
   padding: 19px;
-  background: linear-gradient(transparent,rgb(0 0 0));
+  background: linear-gradient(#00000003,rgb(0 0 0 / 60%));
   color: white;
 }
+.test_p6:hover{
+  background: linear-gradient(transparent,rgb(0 0 0));
+ 
+}
+
 .test_spa{
   color: white;
   font-size: 15px;
@@ -5428,7 +5478,7 @@
 .test2_p6{
     margin-top: 175px;
     padding: 0px 13px 0px 13px;
-    background: linear-gradient(transparent,rgb(0 0 0));
+    background: linear-gradient(#00000003,rgb(0 0 0 / 60%));
     color: white;
     font-size: 13px;
     white-space: normal;
@@ -5448,7 +5498,7 @@
 .test2_p6_first{
     margin-top:  97px;
     padding: 0px 8px 0px 8px;
-    background: linear-gradient(transparent,rgb(0 0 0));
+    background: linear-gradient(#00000003,rgb(0 0 0 / 60%));
     color: white;
     font-size: 11px;
     white-space: normal;
@@ -5464,6 +5514,9 @@
     font-weight: 400;
     line-height: 1.0rem;
     letter-spacing: .0071428571em;
+}
+.test2_p6_first:hover{
+  background: linear-gradient(transparent,rgb(0 0 0));
 }
 
 
@@ -5491,7 +5544,7 @@
     font: bold; 
     font-size: 15px; 
     color: white;
-    border-bottom: 2px solid red;
+    border-bottom: 1px solid #e2e2e2;
     white-space: normal;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -5510,7 +5563,7 @@
      .h_p6_first{
       font-size: 19px;
       color: white;
-      border-bottom: 2px solid red;
+      border-bottom: 1px solid #e2e2e2;
       white-space: normal;
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
@@ -5527,10 +5580,16 @@
   
        }
 
-  .part_6_con:hover{
+  /* .part_6_con:hover{
       transform:scale(1.1);
       z-index: 2;
+     } */
+
+     .test2_p6:hover{
+      background: linear-gradient(transparent,rgb(0 0 0));
      }
+
+
 
 /*part_6 end*/
 
@@ -5672,7 +5731,7 @@
 .dh_2{
 	color: #000000;
     font-size: 20px;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid #e2e2e2;
     padding-bottom: 8px;
     margin-top: 195px;
 }
@@ -5721,7 +5780,7 @@
     color: #6a5d5d94
   }
   .cat_d_h2{
-    border-bottom: 2px solid #ff0000;
+    border-bottom: 2px solid #e2e2e2;
     padding-bottom: 5px;
     font-size: 24px;
     margin-bottom: 28px;
@@ -5730,14 +5789,14 @@
   .h_csl_det{
     font-size: 2rem;
     padding: 2px;
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid #e2e2e2;
     margin-left: -15px;
     margin-top: 0px;
   }
   .h_csl_det2{
     font-size: 2rem;
     padding: 2px;
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid #e2e2e2;
     margin-right: -16px;
     margin-top: 0px;
   }
@@ -5761,7 +5820,7 @@
 .dh_2_cat{
 	  color: #000000;
     font-size: 20px;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid #e2e2e2;
     padding-bottom: 8px;
 }
 /* category page end  */
