@@ -11,7 +11,7 @@
                     </div>
                     <div class="col-7">
                          <amp-img src="img/22.jpg" layout="responsive" width="16" height="9"></amp-img>
-                         <h3>⦿  বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক</h3>
+                         <span  class="time_span">ছবি: প্রথম আলো</span>
                     </div>
                 </div>
             </div>
@@ -56,42 +56,42 @@
     <div class="container mt-2 mb-2">
         <h2 class="dh_2_cat">এ সম্পর্কিত আরও পড়ুন</h2>
         <div class="row">
-          <div class="col-4 ">
+          <div class="col-3 border_right">
               <amp-img src="img/77.jpg" layout="responsive" width="16" height="9"></amp-img>
               <div class= "cont_2" >
                   <h4 class="h_c4">ম্যান সিটি অভিযোগ করেছে থুতু ফেলার অভিযোগ</h4>
                   <p class="ptext">অ্যানফিল্ডে ২-২ ড্রয়ের সময় ম্যানচেস্টার সিটি লিভারপুলের কাছে অভিযোগ করে যে তাদের বাড়ির পেছনের রুমের কর্মীদের সাথে তাদের ঘরের ফ্যান মারার অভিযোগ। </p>
               </div>
             </div>
-            <div class="col-4 ">
+            <div class="col-3 border_right ">
               <amp-img src="img/88.jpg" layout="responsive" width="16" height="9"></amp-img>
               <div class= "cont_2" >
                   <h4 class="h_c4">'নাটক, রাগ, সম্মান - শিরোনামের প্রতিদ্বন্দ্বীরা ক্লাসিককে পরিবেশন করে'</h4>
                   <p class="ptext">গত মৌসুমে যখন লিভারপুল এবং ম্যানচেস্টার সিটি এনফিল্ডে মুখোমুখি হয়েছিল তখন এটি ছিল যে তাদের বাড়ির পেছনের রুমের কর্মীদের সাথে তাদের ঘরের ফ্যান মারার অভিযোগ।</p>
               </div>
             </div>
-            <div class="col-4 ">
+            <div class="col-3 border_right">
               <amp-img src="img/11.png" layout="responsive" width="16" height="9"></amp-img>
               <div class= "cont_2" >
                   <h4 class="h_c4">উইকএন্ড যখন ইউরোপের জায়ান্টরা নম্র ছিল</h4>
                   <p class="ptext">এটি প্রায়শই বায়ার্ন মিউনিখ, রিয়াল মাদ্রিদ, প্যারিস সেন্ট জার্মেইন এবং বার্সেলোনা হারায় না - তবে তারা সবাই ইউরোপীয় ফুটবলে একই পাগল সপ্তাহান্তে করেছে।</p>
               </div>
             </div>
-            <div class="col-4 ">
+            <div class="col-3 ">
               <amp-img src="img/11.png" layout="responsive" width="16" height="9"></amp-img>
               <div class= "cont_2" >
                   <h4 class="h_c4">উইকএন্ড যখন ইউরোপের জায়ান্টরা নম্র ছিল</h4>
                   <p class="ptext">এটি প্রায়শই বায়ার্ন মিউনিখ, রিয়াল মাদ্রিদ, প্যারিস সেন্ট জার্মেইন এবং বার্সেলোনা হারায় না - তবে তারা সবাই ইউরোপীয় ফুটবলে একই পাগল সপ্তাহান্তে করেছে।</p>
               </div>
             </div>
-            <div class="col-4 ">
+            <div class="col-3 border_right mt-2">
               <amp-img src="img/11.png" layout="responsive" width="16" height="9"></amp-img>
               <div class= "cont_2" >
                   <h4 class="h_c4">উইকএন্ড যখন ইউরোপের জায়ান্টরা নম্র ছিল</h4>
                   <p class="ptext">এটি প্রায়শই বায়ার্ন মিউনিখ, রিয়াল মাদ্রিদ, প্যারিস সেন্ট জার্মেইন এবং বার্সেলোনা হারায় না - তবে তারা সবাই ইউরোপীয় ফুটবলে একই পাগল সপ্তাহান্তে করেছে।</p>
               </div>
             </div>
-            <div class="col-4 ">
+            <div class="col-3 border_right mt-2">
               <amp-img src="img/11.png" layout="responsive" width="16" height="9"></amp-img>
               <div class= "cont_2" >
                   <h4 class="h_c4">উইকএন্ড যখন ইউরোপের জায়ান্টরা নম্র ছিল</h4>

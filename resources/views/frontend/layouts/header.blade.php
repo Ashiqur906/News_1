@@ -133,7 +133,7 @@
     </div>
   <!-- top header part end -->
   <!-- menu part start -->
-<header class="ampstart-headerbar flex justify-start items-center top-0 left-0 right-0 pl2 pr4">
+<header class="ampstart-headerbar pos_sticky flex justify-start items-center top-0 left-0 right-0 pl2 pr4">
   <div class="P_part1">
     <div class="container">
       <amp-mega-menu height="30" layout="fixed-height" class="pt-3 ampstart-headerbar">
