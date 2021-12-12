@@ -5116,13 +5116,13 @@
     margin-top: 37px;
    }
    .P_part{
-    background-color: #000000;
+    background-color: #607d8b;
     color: white;
     padding-top: 15px;
     margin-bottom: -22px;
    }
    .P_part1{
-    background-color: #000000;
+    background-color: #607d8b;
     color: white;
     margin-top: 22px;
    }
@@ -5131,7 +5131,7 @@
    }
    
    .logop{
-    background-color: #b80000;
+    background-color: #607d8b;
     color: white;
     height: auto;
     margin-bottom: -29px;
@@ -5147,13 +5147,13 @@
   }
    
    .bgnav{
-    background-color:#000000;
+    background-color:#607d8b;
     
     
    }
 
    .bgnav ul li a{
-    border-left: 1px solid #b80000;
+    border-left: 1px solid #ffffff;
    }
    .bgnav li a{
     color: white;
@@ -5682,7 +5682,7 @@
 
 .marbg{
     background: linear-gradient(45deg,transparent,#6e7687);
-    background-color: #b80000;
+    background-color: #6c92a5;
     padding-top: 5px;
 }
 .marbg a{
@@ -5725,6 +5725,10 @@
     }
     .but_m{
       margin-right: -80px;
+    }
+
+    .pos_sticky{
+      position: sticky;
     }
     .media-body{flex:1}header{width:100%;z-index:99999;top:0px}@media (prefers-color-scheme: light){header.full-width{background:#fff}}@media (prefers-color-scheme: dark){header.full-width{background:#212529}}header.fixed{position:fixed}.mega-menu .header{flex:0 0 100%;max-width:100%;box-shadow:0 0.25rem 1rem rgba(0,0,0,0.15)}.mega-menu .header .container{padding-right:0px;padding-left:0px}
 /* details page css start  */

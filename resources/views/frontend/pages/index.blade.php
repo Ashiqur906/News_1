@@ -3,7 +3,7 @@
 <!-- main part 1 right start box_one-->
 <div class="container">
   <div class="row">
-    <h2 class="h_c">প্রচ্ছদ</h2>
+    <h2 class="h_c mt-3">প্রচ্ছদ</h2>
     <div class="col-9 border_right">
       <div class="row border_bottom">
         <!-- widgets box_one start-->
