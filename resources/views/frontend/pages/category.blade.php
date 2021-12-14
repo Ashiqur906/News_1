@@ -54,9 +54,9 @@
         </div>
     </div>
     <div class="container mt-2 mb-2">
-        <h2 class="dh_2_cat">এ সম্পর্কিত আরও পড়ুন</h2>
+        <h2 class="dh_2_cat">সকল বিভাগ</h2>
         <div class="row">
-          <div class="col-3 border_right">
+           <div class="col-3 border_right">
               <amp-img src="img/77.jpg" layout="responsive" width="16" height="9"></amp-img>
               <div class= "cont_2" >
                   <h4 class="h_c4">ম্যান সিটি অভিযোগ করেছে থুতু ফেলার অভিযোগ</h4>
@@ -134,7 +134,7 @@
                       </div>
                       <div class="col-7">
                            <amp-img src="img/22.jpg" layout="responsive" width="16" height="9"></amp-img>
-                           <h3>⦿  বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক</h3>
+                           <span  class="time_span">ছবি: প্রথম আলো</span>
                       </div>
                   </div>
             </div>
@@ -276,6 +276,40 @@
                 <h3>বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক</h3>
                 <p>বৈশ্বিক মহামারি করোনাভাইরাসের সংক্রমণ ও মৃত্যু কিছুটা কমেছে। গত একদিনে সারাবিশ্বে এ ভাইরাসে চার হাজার ৬২৫ জনের মৃত্যু হয়েছে।  আগামীকাল সকাল  কর্মসূচি শুরু</p>
               </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <h2 class="h_c">সকল বিভাগ</h2>
+        <div class="col-4 border_right">
+          <div class="row mb-2">
+            @for($x = 1; $x <= 3; $x++)
+                @include('frontend.widgets.box_two', ['data' => [
+                  'img' => 'img/33.jpg',
+                  'title' => 'বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক',
+                  'details' => 'বৈশ্বিক মহামারি করোনাভাইরাসের সংক্রমণ ও মৃত্যু কিছুটা কমেছে। গত একদিনে সারাবিশ্বে এ ভাইরাসে চার হাজার ৬২৫ জনের মৃত্যু হয়েছে।  আগামীকাল সকাল  কর্মসূচি শুরু'
+                ]])
+            @endfor
+            </div>
+        </div>
+        <div class="col-4 border_right">
+          <amp-img src="img/22.jpg" layout="responsive" width="16" height="9"></amp-img>
+          <span  class="time_span">ছবি: প্রথম আলো</span>
+          <h3>ঢাবিতে কাল থেকে টিকাদান শুরু</h3>
+          <p>আজ রোববার বিশ্ববিদ্যালয়ের জনসংযোগ দপ্তর এ তথ্য জানিয়েছে। জনসংযোগ বিভাগের পরিচালক মাহমুদ আলমের স্বাক্ষরিত সংবাদ বিজ্ঞপ্তিতে জানানো হয়েছে, আগামীকাল সকাল  কর্মসূচি শুরু হবে।</p>
+          <span  class="time_span"> &#9202;৩৮ মিনিট আগে</span>
+        </div>
+        <div class="col-4">
+          <div class="row mb-2">
+            @for($x = 1; $x <= 3; $x++)
+                @include('frontend.widgets.box_two', ['data' => [
+                  'img' => 'img/33.jpg',
+                  'title' => 'বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক',
+                  'details' => 'বৈশ্বিক মহামারি করোনাভাইরাসের সংক্রমণ ও মৃত্যু কিছুটা কমেছে। গত একদিনে সারাবিশ্বে এ ভাইরাসে চার হাজার ৬২৫ জনের মৃত্যু হয়েছে।  আগামীকাল সকাল  কর্মসূচি শুরু'
+                ]])
+              @endfor
             </div>
         </div>
       </div>
