@@ -380,6 +380,18 @@
     margin-left: 0px;
 }
 
+.detail_11{
+  height: 300px;
+   background: rgb(226 226 226 / 50%); 
+   margin-left: 0px; 
+   margin-top: 204px;
+}
+
+.bg_85858521{
+ background-color: #85858521;
+}
+
+
 
 @media (min-width: 576px) {
   .col-sm {

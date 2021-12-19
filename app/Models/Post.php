@@ -13,23 +13,4 @@ class Post extends Model
         'remarks', 'sort_by', 'is_active', 'modified_by',  'parent_id', 'related_post',  'news_location', 'country_origin', 'language'
     ];
 
-    public function post()
-    {
-        return $this->belongsTo(post::class, 'parent_id');
-    } 
-
-
-    public function categories()
-    {
-        return $this->belongsToMany(Category2::class, 'post_category');
-    }
-    public function tags()
-    {
-        return $this->belongsToMany(Tag::class, 'post_tag');
-    }
-
-    public function relatedpost()
-    {
-        return $this->belongsToMany(post::class, 'post_relations', 'post_id', 'related_post_id');
-    }
 }

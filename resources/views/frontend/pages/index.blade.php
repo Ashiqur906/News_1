@@ -29,8 +29,6 @@
             <amp-img src="img/sports.PNG" layout="responsive" width="16" height="9"></amp-img>
         </div>
       </div>
-
-
       <div class="row border_bottom">
         <div class="col-4">
           <div class="border_right text_content">
@@ -54,7 +52,6 @@
           </div>
         </div>
       </div>
-
       <div class="row border_bottom mt-3">
         <div class="col-4">
           <div class="row">
@@ -89,8 +86,7 @@
             </div>
           </div>
         </div>
-      </div>
-      
+      </div>  
       <div class="row border_bottom mt-3">
         <div class="col-4">
           <div class="row">
@@ -158,11 +154,20 @@
   <h2 class="h_c">আন্তর্জাতিক</h2>
   <div class="row">
     <div class="col-6 border_right">
-      <amp-img src="img/22.jpg" layout="responsive" width="16" height="9"></amp-img>
-      <span  class="time_span">ছবি: প্রথম আলো</span>
+      {{-- <amp-img src="img/22.jpg" layout="responsive" width="16" height="9"></amp-img>
+      <span  class="pic_span">ছবি: প্রথম আলো</span>
       <h3>ঢাবিতে কাল থেকে টিকাদান শুরু</h3>
       <p>আজ রোববার বিশ্ববিদ্যালয়ের জনসংযোগ দপ্তর এ তথ্য জানিয়েছে। জনসংযোগ বিভাগের পরিচালক মাহমুদ আলমের স্বাক্ষরিত সংবাদ বিজ্ঞপ্তিতে জানানো হয়েছে, আগামীকাল সকাল  কর্মসূচি শুরু হবে।</p>
-      <span  class="time_span"> &#9202;৩৮ মিনিট আগে</span>
+      <span  class="time_span"> &#9202;৩৮ মিনিট আগে</span> --}}
+      @for($x = 1; $x <= 1; $x++)
+            @include('frontend.widgets.inter_part_1', ['data' => [
+              'img' => 'img/22.jpg',
+              'pic_span' =>'ছবি: প্রথম আলো',
+              'title' => 'ঢাবিতে কাল থেকে টিকাদান শুরু',
+              'time_span'=>'&#9202; ৩৮ মিনিট আগে',
+              'details' => 'আজ রোববার বিশ্ববিদ্যালয়ের জনসংযোগ দপ্তর এ তথ্য জানিয়েছে। জনসংযোগ বিভাগের পরিচালক মাহমুদ আলমের স্বাক্ষরিত সংবাদ বিজ্ঞপ্তিতে জানানো হয়েছে, আগামীকাল সকাল  কর্মসূচি শুরু হবে।'
+            ]])
+          @endfor
     </div>
     <div class="col-6">
       <div class="row mb-2">
@@ -571,8 +576,4 @@
         </div>
       </div>
     </div>
-    
-
-
-    
 @endsection

@@ -38,6 +38,7 @@ $.widget.bridge('uibutton', $.ui.button)
 <script src="{{asset ('plugins/daterangepicker/daterangepicker.js')}}"></script>
 <!-- Tempusdominus Bootstrap 4 -->
 <script src="{{asset ('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <!-- Summernote -->
 <script src="{{asset ('plugins/summernote/summernote-bs4.min.js')}}"></script>
 <!-- overlayScrollbars -->

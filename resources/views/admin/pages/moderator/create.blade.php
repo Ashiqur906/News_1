@@ -60,7 +60,7 @@
                 <div class="card-body">
                   <div class="form-group">
                     {{ Form::label('name', 'Name') }}
-                    {{-- {{ Form::text('name', !empty($fdata->name) ? $fdata->name : null, ['id' => 'name', 'class' => $errors->has('name') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Name']) }} --}}
+                    {{ Form::text('name', !empty($fdata->name) ? $fdata->name : null, ['id' => 'name', 'class' => $errors->has('name') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Name']) }}
                     @error('name')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -69,7 +69,7 @@
                   </div>
                   <div class="form-group">
                     {{ Form::label('Slug', 'Slug') }}
-                    {{-- {{ Form::text('slug', !empty($fdata->slug) ? $fdata->slug : null, ['id' => 'slug', 'class' => $errors->has('slug') ? 'form-control is-invalid' : 'form-control','placeholder' => 'Slug']) }} --}}
+                    {{ Form::text('slug', !empty($fdata->slug) ? $fdata->slug : null, ['id' => 'slug', 'class' => $errors->has('slug') ? 'form-control is-invalid' : 'form-control','placeholder' => 'Slug']) }}
                     @error('slug')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -78,7 +78,7 @@
                   </div>
                   <div class="form-group">
                     {{ Form::label('role', 'Roles') }}
-                    {{-- {{ Form::select('role_id[]', getRoleArr(), $fdata && $fdata->roles ? $fdata->roles->pluck('id')->toArray() : null, ['class' => $errors->has('people_id') ? 'form-control myselect2  is-invalid' : 'form-control myselect2', 'multiple' => 'multiple']) }} --}}
+                    {{ Form::select('role_id[]', getRoleArr(), $fdata && $fdata->roles ? $fdata->roles->pluck('id')->toArray() : null, ['class' => $errors->has('people_id') ? 'form-control myselect2  is-invalid' : 'form-control myselect2', 'multiple' => 'multiple']) }}
                     @error('role_id')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -103,7 +103,7 @@
                   
                   <div class="form-group">
                     {{ Form::label('description', 'Description') }}
-                    {{-- {{ Form::textarea('description', !empty($fdata->description) ? $fdata->description : null, ['rows' => 3, 'placeholder' => 'Description..', 'class' => 'htmltexteditor form-control ' . ($errors->has('description') ? ' is-invalid' : '')]) }} --}}
+                    {{ Form::textarea('description', !empty($fdata->description) ? $fdata->description : null, ['rows' => 3, 'placeholder' => 'Description..', 'class' => 'htmltexteditor form-control ' . ($errors->has('description') ? ' is-invalid' : '')]) }}
                     @error('description')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -114,7 +114,7 @@
                   
                   <div class="form-group">
                     {{ Form::label('dob', 'Date of Birth ') }}
-                    {{-- {{ Form::date('dob', $fdata->dob ? date('Y-m-d', strtotime($fdata->dob)) : null, ['id' => 'dob', 'class' => $errors->has('dob') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Date of Birth']) }} --}}
+                    {{ Form::date('dob', $fdata->dob ? date('Y-m-d', strtotime($fdata->dob)) : null, ['id' => 'dob', 'class' => $errors->has('dob') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Date of Birth']) }}
                     @error('dob')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -124,7 +124,7 @@
   
                   <div class="form-group">
                     {{ Form::label('years_active', 'Date of Years active ') }}
-                    {{-- {{ Form::date('years_active', $fdata->years_active ? date('Y-m-d', strtotime($fdata->years_activegit )) : null, ['id' => 'years_active', 'class' => $errors->has('years_active') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Date of Years active']) }} --}}
+                    {{ Form::date('years_active', $fdata->years_active ? date('Y-m-d', strtotime($fdata->years_activegit )) : null, ['id' => 'years_active', 'class' => $errors->has('years_active') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Date of Years active']) }}
                     @error('years_active')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -133,7 +133,7 @@
                   </div>
                   <div class="form-group">
                     {{ Form::label('dead', 'Date of Years active end ') }}
-                    {{-- {{ Form::date('dead', $fdata->dead ? date('Y-m-d', strtotime($fdata->dead)) : null, ['id' => 'dead', 'class' => $errors->has('dead') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Date of Dead']) }} --}}
+                    {{ Form::date('dead', $fdata->dead ? date('Y-m-d', strtotime($fdata->dead)) : null, ['id' => 'dead', 'class' => $errors->has('dead') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Date of Dead']) }}
                     @error('dead')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -142,7 +142,7 @@
                   </div>                
                   <div class="form-group">
                     {{ Form::label('link', 'Facebook Link') }}
-                    {{-- {{ Form::text('link', !empty($fdata->link) ? $fdata->link : null, ['id' => 'link', 'class' => $errors->has('link') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Facebook Link']) }} --}}
+                    {{ Form::text('link', !empty($fdata->link) ? $fdata->link : null, ['id' => 'link', 'class' => $errors->has('link') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Facebook Link']) }}
                     @error('link')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -151,7 +151,7 @@
                 </div>
                 <div class="form-group">
                     {{ Form::label('link', 'Email Link') }}
-                    {{-- {{ Form::text('link', !empty($fdata->link) ? $fdata->link : null, ['id' => 'link', 'class' => $errors->has('link') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Email Link']) }} --}}
+                    {{ Form::text('link', !empty($fdata->link) ? $fdata->link : null, ['id' => 'link', 'class' => $errors->has('link') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Email Link']) }}
                     @error('link')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -160,7 +160,7 @@
                 </div>
                 <div class="form-group">
                     {{ Form::label('link', 'Instagram Link') }}
-                    {{-- {{ Form::text('link', !empty($fdata->link) ? $fdata->link : null, ['id' => 'link', 'class' => $errors->has('link') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Instagram Link']) }} --}}
+                    {{ Form::text('link', !empty($fdata->link) ? $fdata->link : null, ['id' => 'link', 'class' => $errors->has('link') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Instagram Link']) }}
                     @error('link')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -169,7 +169,7 @@
                 </div>
                 <div class="form-group">
                     {{ Form::label('link', 'Twitter Link') }}
-                    {{-- {{ Form::text('link', !empty($fdata->link) ? $fdata->link : null, ['id' => 'link', 'class' => $errors->has('link') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Twitter Link']) }} --}}
+                    {{ Form::text('link', !empty($fdata->link) ? $fdata->link : null, ['id' => 'link', 'class' => $errors->has('link') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Twitter Link']) }}
                     @error('link')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -178,7 +178,7 @@
                 </div>
                 <div class="form-group">
                     {{ Form::label('link', 'Linkedin Link') }}
-                    {{-- {{ Form::text('link', !empty($fdata->link) ? $fdata->link : null, ['id' => 'link', 'class' => $errors->has('link') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Linkedin Link']) }} --}}
+                    {{ Form::text('link', !empty($fdata->link) ? $fdata->link : null, ['id' => 'link', 'class' => $errors->has('link') ? 'form-control is-invalid' : 'form-control', 'placeholder' => 'Linkedin Link']) }}
                     @error('link')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

@@ -1,35 +1,35 @@
-{"tag": "div", 
+{ 
 
 
     "tag": "container",
     "class": "row",
     "nodes": [
-        {"tag": "div",
+        {
             "tag": "row",
             "class": "h_c mt-3",
             "nodes":[
-                {"tag": "div",
+                {
                    "tag": "div",
                    "class": "col-9",
                    "nodes":[
-                        {"tag": "div",
+                        {
                             "tag": "div",
                             "class": "row",
                             "nodes":[
-                                    {"tag": "div",
+                                    {
                                         "tag": "div",
                                         "class": "col-8",
                                         "nodes":[
-                                                {"tag": "div",
+                                                {
                                                     "tag": "div",
                                                     "class": "row",
                                                     "nodes":[
-                                                        {"tag": "div",
+                                                        {
                                                             "tag": "div",
                                                             "class": "col-6"
                                                         
                                                         },
-                                                        {"tag": "div",
+                                                        {
                                                             "tag": "div",
                                                             "class": "col-6"
                                                         
@@ -42,7 +42,7 @@
                                             ]
                                     
                                     },
-                                    {"tag": "div",
+                                    {
                                         "tag": "div",
                                         "class": "col-4",
                                         "label": "main-parrt-1-right",
@@ -52,18 +52,18 @@
                                 ]
                         
                         },
-                        {"tag": "div",
+                        {
                             "tag": "row",
                             "class": "col-4",
                             "nodes":[
-                                {"tag": "div",
+                                {
                                     "tag": "div",
                                     "class": "border_right text_content",
                                     "label": "main-parrt-1-right",
                                     "section_id": "main-parrt-1-right"
 
                                 },
-                                {"tag": "div",
+                                {
                                     "tag": "div",
                                     "class": "border_right text_content",
                                     "label": "main-parrt-1-right",
@@ -75,18 +75,18 @@
                             ]
 
                         },
-                        {"tag": "div",
+                        {
                             "tag": "row",
                             "class": "col-4",
                             "nodes":[
-                                {"tag": "div",
+                                {
                                     "tag": "div",
                                     "class": "border_right text_content",
                                     "label": "main-parrt-1-right",
                                     "section_id": "main-parrt-1-right"
 
                                 },
-                                {"tag": "div",
+                                {
                                     "tag": "div",
                                     "class": "border_right text_content",
                                     "label": "main-parrt-1-right",
@@ -104,18 +104,18 @@
                     ]
                    
                 },
-                {"tag": "div",
+                {
                     "tag": "div",
                     "class": "col-3",
                     "nodes":[
-                                {"tag": "div",
+                                {
                                     "tag": "row",
                                     "class": "mb-4",
                                     "label": "main part 1 left t",
                                     "section_id": "main part 1 left "
 
                                 },
-                                {"tag": "div",
+                                {
                                     "tag": "row",
                                     "class": "mar_left",
                                     "label": "main part 1 left ",
@@ -160,7 +160,8 @@
         
         }
     ]
-  
+  }
+   {
     "tag": "container mt-5",
     "class": "row",
     "nodes": [
@@ -205,10 +206,10 @@
                
            }   
 
-    ],
- 
+    ]
+   }
     
-   
+   {
 
     "tag": "container",
     "class": "row",
@@ -275,7 +276,11 @@
         
         }
 
-    ],
+    ]
+  }
+  {
+
+
 
     "tag": "container",
     "class": "row",
@@ -350,11 +355,11 @@
                         }
                     ]
                 },
-                {"tag": "div",
+                {
                     "tag": "div",
                     "class": "part_6_con11",
                     "nodes": [
-                        {"tag": "div",
+                        {
                             "tag": "div",
                             "class": "test_p6"
 
@@ -365,23 +370,24 @@
             ]
         }
     ]
-
+}
+{
 
   "tag": "container mb-5 fixed flex",
     "class": "row",
     "nodes": [
-      {"tag": "div",
+      {
         "tag": "div",
         "class": "col-8",
         "nodes": [
-            {"tag": "div",
+            {
               "tag": "row",
               "class": "col-6",
               "label": "video widgets",
               "section_id": "video widgets"
 
             },
-            {"tag": "div",
+            {
               "tag": "row",
               "class": "col-6",
               "label": "video widgets",
@@ -391,7 +397,7 @@
         ]
 
       },
-      {"tag": "div",
+      {
         "tag": "div",
         "class": "col-4"
       }
