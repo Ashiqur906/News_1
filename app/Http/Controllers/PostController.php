@@ -21,18 +21,13 @@ class PostController extends Controller
 	    if($request->media_type) {
 	    	$queryWhere['media_type'] = $request->media_type;
 	    }
-	    if($request->name) {
-	    	$queryWhere[] = ['name', 'LIKE', '%'.$request->name.'%'];
-	    }
 	    if($request->title) {
 	    	$queryWhere[] = ['title', 'LIKE', '%'.$request->title.'%'];
 	    }
 	    if($request->per_page) {
 	    	$per_page = $request->per_page;
 	    }
-	    if($request->release_date) {
-		    $queryWhere['release_date'] = $request->release_date;
-	    }
+	    
 
         $posts = Post::where($queryWhere)->paginate($per_page);
         return view('admin.pages.post.list', compact('posts','request'));
@@ -66,13 +61,11 @@ class PostController extends Controller
         $fdata    = Post::findOrfail($id);
         $category = Categoty2::orderBy('id', 'desc')->get();
         $role = Role::orderBy('id', 'desc')->get();
-        $people = Entity::orderBy('id', 'desc')->get();
         return view('admin.pages.post.create')->with([
             'fdata'             => $fdata,
             'category'          => $category,
-            'post'              => $post,
+            'posts'              => $posts,
             'role'              => $role,
-            'people'            => $people,
             'add_by'             => $fdata->getEntitiesByRole(1),
         
         ]);
