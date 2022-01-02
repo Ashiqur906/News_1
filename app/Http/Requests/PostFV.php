@@ -25,7 +25,8 @@ class PostFV extends FormRequest
     {
         return [
             'title'              => 'required|max:150',
-            'slug'              => 'required|max:191|unique:media,slug,' . $request->get('id'),
+            'slug'              => 'nullable',
+            // 'slug'              => 'required|max:191|unique:post,slug,' . $request->get('id'),
             'description'       => 'nullable',
             'category_id'       => 'nullable',
             'post_type'         => 'nullable',

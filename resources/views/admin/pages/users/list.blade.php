@@ -31,13 +31,13 @@
                 {{ Form::select('per_page', array_combine([5,10,20,40], [5,10,20,40]), $request->per_page, ['class' => 'form-control autoSubmit']) }}
               </div>
               <div class="w-auto mx-2">
-                <a href="{{ route('moderator.add') }}" class="btn btn-outline-primary">+ Add User</a>
+                <a href="{{ route('users.add') }}" class="btn btn-outline-primary">+ Add User</a>
               </div>
               <div class="w-auto mx-2">
-                <a href="{{ route('moderator.index') }}" class="btn btn-outline-secondary btn-sm mt-1"><i class="fa fa-undo"></i>Clear</a>
+                <a href="{{ route('users.index') }}" class="btn btn-outline-secondary btn-sm mt-1"><i class="fa fa-undo"></i>Clear</a>
               </div>
               <div class="w-auto ml-auto">
-                <h3 class="card-title">Showing {{$moderator->firstItem()}}-{{$moderator->lastItem()}} of {{$moderator->total()}} items.</h3>
+                <h3 class="card-title">Showing {{$users->firstItem()}}-{{$users->lastItem()}} of {{$users->total()}} items.</h3>
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@
                 </tr>
               </thead>
               <tbody>
-                  @foreach ($moderator as $item)
+                  @foreach ($users as $item)
                     <tr role="row" class="odd">
                       <td class="">{{$item->id}}</td>
                       <td>{{$item->name}}</td>
@@ -67,9 +67,9 @@
                       <td><img src="{{asset($item->image)}}" height="180px" width="140px" alt=""></td>
                       <td>{{$item->gender}}</td>
                       <td class="sorting_1 btn-group">
-                        <a href="{{url('admin/moderator')}}/edit/{{$item->id}}" class="btn btn-success">Edit</a>
-                        <a href="{{ url('admin/moderator') }}/delete/{{$item->id}}" class="btn btn-danger">Delete</a>
-                        <a href="{{ url('/moderator/'.$item->slug) }}" class="btn btn-primary">View</a>
+                        <a href="{{url('admin/entity')}}/edit/{{$item->id}}" class="btn btn-success">Edit</a>
+                        <a href="{{ url('admin/entity') }}/delete/{{$item->id}}" class="btn btn-danger">Delete</a>
+                        <a href="{{ url('/profile/'.$item->slug) }}" class="btn btn-primary">View</a>
                       </td>
                     </tr>
                   @endforeach
@@ -77,7 +77,7 @@
             </table>                     
           </div>
           <div class="card-footer clearfix">
-              {!! $moderator->withQueryString()->links('pagination::bootstrap-4') !!}
+              {!! $users->withQueryString()->links('pagination::bootstrap-4') !!}
           </div>
         </div> 
       </section>
