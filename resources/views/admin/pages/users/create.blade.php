@@ -44,7 +44,7 @@
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-        {{ Form::open(['method' => 'POST', 'route' => 'moderator.store', 'enctype' => 'multipart/form-data']) }}
+        {{ Form::open(['method' => 'POST', 'route' => 'users.store', 'enctype' => 'multipart/form-data']) }}
         <div class="row">
           <!-- left column -->
           <div class="col-md-9">

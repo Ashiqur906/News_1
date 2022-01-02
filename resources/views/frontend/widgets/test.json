@@ -1,0 +1,491 @@
+{ 
+   "tag": "div",
+   "nodes":[
+    { 
+      "tag": "div",
+      "class": "container",
+      "div": { 
+
+            "tag": "div",
+            "class": "row",
+            "nodes":[
+            { 
+                "tag": "div",
+                "class": "col-9 border_right",
+                "nodes":[
+                { 
+                    "tag": "div",
+                    "class": "row border_bottom",
+                    "nodes":[
+                    { "tag": "div",
+                        "class": "col-8",
+                        "div": { 
+                            "tag": "div",
+                            "class": "row border_right",
+                            "nodes":[
+                                { 
+                                    "tag": "div",
+                                    "class": "col-6"
+                                },
+                                { 
+                                    "tag": "div",
+                                    "class": "col-6"
+                                }
+                            ]
+                            }
+                    },
+                    { 
+                        "tag": "div",
+                        "class": "col-4"
+                    }
+                    ]
+                },
+                { 
+                    "tag": "div",
+                    "class": "row border_bottom",
+                    "nodes":[
+                    {
+                         "tag": "div",
+                        "class": "col-4",
+                        "div": { "tag": "div",
+                        "class": "border_right text_content"
+                        }
+                    },
+                    { 
+                        "tag": "div",
+                        "class": "col-4",
+                        "div": { "tag": "div",
+                        "class": "border_right mb-3 text_content"
+                        }
+                    },
+                    {
+                         "tag": "div",
+                        "class": "col-4",
+                        "div": { "tag": "div",
+                        "class": "mb-3 "
+                        }
+                    }
+                    ]
+                },
+                { 
+                    "tag": "div",
+                    "class": "row border_bottom mt-3",
+                    "nodes":[
+                    { 
+                        "tag": "div",
+                        "class": "col-4",
+                        "div": { 
+                        "tag": "div",
+                        "class": "row",
+                        "nodes":[
+                            { 
+                                
+                            "tag": "div",
+                            "class": "col-5"
+                            },
+                            { 
+                                "tag": "div",
+                            "class": "col-7 border_right text_content"
+                            }
+                        ]
+                        }
+                    },
+                    { 
+                        "tag": "div",
+                        "class": "col-4",
+                        "div": { 
+                        "tag": "div",
+                        "class": "row",
+                        "nodes":[
+                            { 
+                            "tag": "div",
+                            "class": "col-5"
+                            },
+                            { 
+                            "tag": "div",
+                            "class": "col-7 border_right text_content"
+                            }
+                        ]
+                        }
+                    },
+                    { "tag": "div",
+                        "class": "col-4",
+                        "div": { 
+                        "tag": "div",
+                        "class": "row",
+                        "nodes":[
+                            { 
+                            "tag": "div",
+                            "class": "col-5 mb-2"
+                            },
+                            { 
+                            "tag": "div",
+                            "class": "col-7"
+                            }
+                        ]
+                        }
+                    }
+                    ]
+                },
+                { 
+                    "tag": "div",
+                    "class": "row border_bottom mt-3",
+                    "nodes":[
+                    { 
+                        "tag": "div",
+                        "class": "col-4",
+                        "div": { "tag": "div",
+                        "class": "row",
+                        "nodes":[
+                            { 
+                            "tag": "div",
+                            "class": "col-5"
+                            },
+                            { 
+                            "tag": "div",
+                            "class": "col-7 border_right text_content"
+                            }
+                        ]
+                        }
+                    },
+                    {
+                        "tag": "div",
+                        "class": "col-4",
+                        "div": { 
+                            "tag": "div",
+                        "class": "row",
+                        "nodes":[
+                            { "tag": "div",
+                            "class": "col-5"
+                            },
+                            { "tag": "div",
+                            "class": "col-7 border_right text_content"
+                            }
+                        ]
+                        }
+                    },
+                    { "tag": "div",
+                        "class": "col-4",
+                        "div": { "tag": "div",
+                        "class": "row",
+                        "nodes":[
+                            { "tag": "div",
+                            "class": "col-5 mb-2"
+                            },
+                            { "tag": "div",
+                            "class": "col-7"
+                            }
+                        ]
+                        }
+                    }
+                    ]
+                }
+                ]
+            },
+            { "tag": "div",
+                "class": "col-3",
+                "nodes":[
+                { "tag": "div",
+                    "class": "row mb-4",
+                    "style": "height: 300px; background: rgb(226 226 226 / 50%); margin-left: 0px;"
+                },
+                { "tag": "div",
+                    "class": "row mar_left"
+                },
+                { "tag": "div",
+                    "class": "row mb-2"
+                },
+                { "tag": "div",
+                    "class": "row mb-2"
+                }
+                ],
+                "h2": { "tag": "div",
+                "class": "h_left"
+                }
+            }
+            ]
+      }
+    },
+    { "tag": "div",
+      "class": "container mt-5",
+      "div": { "tag": "div",
+        "class": "row",
+         "nodes":[
+          { "tag": "div",
+            "class": "col-6 border_right"
+          },
+          { "tag": "div",
+            "class": "col-6",
+             "nodes":[
+              { "tag": "div",
+                "class": "row mb-2"
+              },
+              { "tag": "div",
+                "class": "row mb-2"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    { "tag": "div",
+      "class": "container",
+      "div": { "tag": "div",
+        "class": "row",
+         "nodes":[
+          { "tag": "div",
+            "class": "col-9",
+            "div": { "tag": "div",
+              "class": "row",
+               "nodes":[
+                { "tag": "div",
+                  "class": "col-4 mb-3 border_right"
+                },
+                { "tag": "div",
+                  "class": "col-4 mb-3 border_right"
+                },
+                { "tag": "div",
+                  "class": "col-4 mb-3 border_right"
+                },
+                { "tag": "div",
+                  "class": "col-4 mb-3 border_right"
+                },
+                { "tag": "div",
+                  "class": "col-4 mb-3 border_right"
+                },
+                { "tag": "div",
+                  "class": "col-4 mb-3 border_right"
+                }
+              ]
+            }
+          },
+          { "tag": "div",
+            "class": "col-3",
+            "h2": { "tag": "div",
+              "class": "h_csl"
+            },
+             "nodes":[
+              { "tag": "div",
+                "class": "row mb-2 slide_text_1"
+              },
+              { "tag": "div",
+                "class": "row mb-2 slide_text_1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    { "tag": "div",
+      "class": "container",
+      "div": { "tag": "div",
+        "class": "row",
+         "nodes":[
+          { "tag": "div",
+            "class": "col-6",
+            "style": "margin-right: -25px"
+          },
+          { "tag": "div",
+            "class": "col-6",
+            "div": { "tag": "div",
+              "class": "row",
+               "nodes":[
+                { "tag": "div",
+                  "class": "col-4 border_right"
+                },
+                { "tag": "div",
+                  "class": "col-4 border_right"
+                },
+                { "tag": "div",
+                  "class": "col-4"
+                },
+                { "tag": "div",
+                  "class": "col-4 border_right"
+                },
+                { "tag": "div",
+                  "class": "col-4 border_right"
+                },
+                { "tag": "div",
+                  "class": "col-4"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    { "tag": "div",
+      "class": "container mb-5 fixed flex",
+      "div": { "tag": "div",
+        "class": "row",
+         "nodes":[
+          { "tag": "div",
+            "class": "col-8",
+            "div": { "tag": "div",
+              "class": "row",
+               "nodes":[
+                { "tag": "div",
+                  "class": "col-6"
+                },
+                { "tag": "div",
+                  "class": "col-6"
+                }
+              ]
+            }
+          },
+          { "tag": "div",
+            "class": "col-4",
+            "style": "background:#f0f0f0;"
+          }
+        ]
+      }
+    },
+    { "tag": "div",
+      "class": "container mt-2 mb-5",
+      "div": { "tag": "div",
+        "class": "container mt-5 mb-5",
+        "div": { "tag": "div",
+          "class": "row",
+           "nodes":[
+            { "tag": "div",
+              "class": "col-3 border_right"
+            },
+            { "tag": "div",
+              "class": "col-3 border_right"
+            },
+            { "tag": "div",
+              "class": "col-3 border_right"
+            },
+            { "tag": "div",
+              "class": "col-3 border_right"
+            }
+          ]
+        }
+      }
+    },
+    { "tag": "div",
+      "class": "container",
+      "div": { "tag": "div",
+        "class": "row",
+         "nodes":[
+          { "tag": "div",
+            "class": "col-3"
+          },
+          { "tag": "div",
+            "class": "col-3"
+          },
+          { "tag": "div",
+            "class": "col-3"
+          },
+          { "tag": "div",
+            "class": "col-3"
+          },
+          { "tag": "div",
+            "class": "col-3"
+          },
+          { "tag": "div",
+            "class": "col-6",
+            "div": { "tag": "div",
+              "class": "row",
+              "div": { "tag": "div",
+                "class": "col-12 ml-2 mr-2",
+                "style": "background: #e2e2e2; height: 295px; margin-left: 12px;"
+              }
+            }
+          }
+        ]
+      }
+    },
+    { "tag": "div",
+      "class": "container mt-2 mb-2",
+      "div": { "tag": "div",
+        "class": "row",
+         "nodes":[
+          { "tag": "div",
+            "class": "col-4",
+            "style": "border: 1px solid #e2e2e2;"
+          },
+          { "tag": "div",
+            "class": "col-8",
+             "nodes":[
+              { "tag": "div",
+                "class": "row",
+                 "nodes":[
+                  { "tag": "div",
+                    "class": "col-4 border_right"
+                  },
+                  { "tag": "div",
+                    "class": "col-4 border_right"
+                  },
+                  { "tag": "div",
+                    "class": "col-4"
+                  }
+                ]
+              },
+              { "tag": "div",
+                "class": "row mt-2",
+                "div": { "tag": "div",
+                  "class": "col-12 ml-2 mr-2",
+                  "style": "background: #e2e2e2; height: 215px; margin-left: 12px;"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    { "tag": "div",
+      "class": "container mt-2 mb-2",
+      "div": { "tag": "div",
+        "class": "row",
+         "nodes":[
+          { "tag": "div",
+            "class": "col-3 mt-2 border_right"
+          },
+          { "tag": "div",
+            "class": "col-3 mt-2 border_right"
+          },
+          { "tag": "div",
+            "class": "col-3 mt-2 border_right"
+          },
+          { "tag": "div",
+            "class": "col-3 mt-2 border_right"
+          },
+          { "tag": "div",
+            "class": "col-3 mt-2 border_right"
+          },
+          { "tag": "div",
+            "class": "col-6 mt-2",
+            "div": { "tag": "div",
+              "class": "row",
+              "div": { "tag": "div",
+                "class": "col-12 ml-2 mr-2",
+                "style": "background: #e2e2e2; height: 356px; margin-left: 12px;"
+              }
+            }
+          }
+        ]
+      }
+    },
+    { "tag": "div",
+      "class": "container",
+      "div": { "tag": "div",
+        "class": "row",
+         "nodes":[
+          { "tag": "div",
+            "class": "col-4 border_right"
+          },
+          { "tag": "div",
+            "class": "col-4 border_right"
+          },
+          { "tag": "div",
+            "class": "col-4",
+            "div": { "tag": "div",
+              "class": "row mb-2"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

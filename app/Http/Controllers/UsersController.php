@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Requests\ModeratorFV;
-use App\Models\Moderator;
+use App\Http\Requests\UsersFV;
+use App\Models\Users;
 use App\Models\Role;
 use Illuminate\Http\Request;
 
-class ModeratorController extends Controller
+class UsersController extends Controller
 {
     public function index(Request $request)
     {
@@ -24,31 +24,31 @@ class ModeratorController extends Controller
 	    if($request->per_page) {
 	    	$per_page = $request->per_page;
 	    }
-        // $moderator = Entity::orderBy('id', 'desc')->paginate(5);
-        $moderator = Moderator::where($queryWhere)->paginate($per_page);
-        return view('admin.pages.moderator.list', compact('moderators','request'));
+        // $Users = Entity::orderBy('id', 'desc')->paginate(5);
+        $Users = Users::where($queryWhere)->paginate($per_page);
+        return view('admin.pages.users.list', compact('Users','request'));
     }
 
     public function add()
     {
         $role   = Role::orderBy('id', 'desc')->get();
-        $moderator = Moderator::orderBy('id', 'desc')->get();
+        $Users = Users::orderBy('id', 'desc')->get();
         
-        return view('admin.pages.moderator.create')->with([
+        return view('admin.pages.users.create')->with([
             'role'   => $role,
-            'moderator' => $moderator,
-            'fdata'  => new Moderator(),
+            'users' => $Users,
+            'fdata'  => new Users(),
             'mdata'  => null
         ]); 
     }
     public function teamAdd()
     {
         $role   = Role::orderBy('id', 'desc')->get();
-        $moderator = Moderator::orderBy('id', 'desc')->get();
-        return view('admin.pages.moderator.add')->with([ 
+        $Users = Users::orderBy('id', 'desc')->get();
+        return view('admin.pages.users.add')->with([ 
             'role'   => $role,
-            'moderator' => $moderator,
-            'fdata'  => new Moderator(),
+            'users' => $users,
+            'fdata'  => new Users(),
             'mdata'  => null
         ]);
     }
@@ -60,14 +60,14 @@ class ModeratorController extends Controller
             return redirect()->back()->withErrors('No Profile id found');
         }
 
-        $fdata = Moderator::findOrfail($id);
+        $fdata = Users::findOrfail($id);
 
-        return view('admin.pages.moderator.create')->with([
+        return view('admin.pages.users.create')->with([
             'fdata' => $fdata,
             'mdata' => null
         ]);
     }
-    public function store(ModeratorFV $request)
+    public function store(UsersFV $request)
     {  
         // return $request;
         //  dd($request->hasFile('image'));git 
@@ -94,7 +94,7 @@ class ModeratorController extends Controller
        
         try {
             if ($id) {
-                $existing = Moderator::findOrFail($id);
+                $existing = Users::findOrFail($id);
                 if ($request->hasFile('image')) {
                     if (File::exists($existing->image)) {
                         File::delete($existing->image);
@@ -108,12 +108,12 @@ class ModeratorController extends Controller
                 }
              
              
-                $sumbit =  Moderator::where('id', $id)->update($attributes);
+                $sumbit =  Users::where('id', $id)->update($attributes);
                 $existing->roles()->sync($request->role_id);
                 $abledata = [
                     'data'      => $request,
                     'able_id'   => $id,
-                    'able_type' => Moderator::class,
+                    'able_type' => Users::class,
                 ];
                 $this->seoPost($abledata);
             } else {
@@ -125,16 +125,16 @@ class ModeratorController extends Controller
                     $attributes['image']    = $destination . '/' . $photo;
                  
                 }
-                $insert = Moderator::create($attributes);
+                $insert = Users::create($attributes);
                 $insert->roles()->sync($request->role_id);
                 $abledata = [
                     'data'      => $request,
                     'able_id'   => $insert->id,
-                    'able_type' => Moderator::class,
+                    'able_type' => Users::class,
                 ];
                 $this->seoPost($abledata);
             }
-            return redirect()->route('moderator.index')->with("Success", "Successfully save changed");
+            return redirect()->route('users.index')->with("Success", "Successfully save changed");
         } catch (\Illuminate\Database\QueryException $ex) {
 
             return redirect()->back()->withErrors($ex->getMessage())
@@ -144,14 +144,14 @@ class ModeratorController extends Controller
     
     public function delete($id)
     {
-        $moderator = Moderator::find($id);
-        if (!is_null($moderator)) {
+        $users = Users::find($id);
+        if (!is_null($Users)) {
             //Delete Image
-            if (File::exists($moderator->image)) {
-                File::delete($moderator->image);
+            if (File::exists($users->image)) {
+                File::delete($users->image);
             }
-            $moderator->delete();
+            $users->delete();
         }
-        return redirect('admin/moderator')->with("success", "moderator deleted successfully.");
+        return redirect('admin/users')->with("success", "users deleted successfully.");
     }
 }

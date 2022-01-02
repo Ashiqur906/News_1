@@ -1,0 +1,120 @@
+{   
+    
+    "tag": "div",
+    "nodes":[
+      {
+        "class": "container first_1",
+        "div": {
+          "class": "row",
+          "nodes":[
+            { 
+              "tag": "div",
+              "class": "col-9"
+            },
+            {
+              "class": "col-3",
+              "nodes":[
+                {
+                  "class": "row mb-4 detail_11"
+                },
+                {
+                  "class": "row mar_left"
+                },
+                {
+                  "class": "row mb-2",
+                  "div": {
+                    "class": "row mb-2 slide_text_1",
+                    "nodes":[
+                      {
+                        "class": "col-5"
+                      },
+                      {
+                        "class": "col-7 slide_text"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "class": "container first_2",
+        "div": {
+          "class": "row",
+          "nodes":[
+            {
+              "class": "col-7",
+              "div": {
+                "class": "row",
+                "div": {
+                  "class": "col-12"
+                }
+              }
+            },
+            {
+              "class": "col-5 bg_85858521",
+              "div": {
+                "class": "row",
+                "div": {
+                  "class": "col-6 mt-2",
+                  "div": {
+                    "class": "part_6_con1",
+                    "div": {
+                      "class": "test2_p6_first"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "class": "container",
+        "div": {
+          "class": "row",
+          "nodes":[
+            {
+              "class": "col-4 border_right",
+              "div": {
+                "class": "row mb-2",
+                "div": {
+                  "class": "row mb-2 slide_text_1",
+                  "nodes":[
+                    {
+                      "class": "col-5"
+                    },
+                    {
+                      "class": "col-7 slide_text"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "class": "col-4 border_right"
+            },
+            {
+              "class": "col-4",
+              "div": {
+                "class": "row mb-2",
+                "div": {
+                  "class": "row mb-2 slide_text_1",
+                  "nodes":[
+                    {
+                      "class": "col-5"
+                    },
+                    {
+                      "class": "col-7 slide_text"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
