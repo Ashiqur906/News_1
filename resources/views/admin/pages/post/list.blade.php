@@ -34,7 +34,7 @@
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Name</th>
+                <th>Title</th>
                 <th>Post Type</th>
                 <th>Release Date</th>
                 <th>Landscape Image</th>
@@ -43,28 +43,29 @@
               </tr>
               <tr>
                 <th><input type="number" name="id" class="form-control autoSubmit" value="{{$request->id}}"></th>
-                <th><input type="text" name="name" class="form-control autoSubmit" value="{{$request->name}}"></th>
                 <th><input type="text" name="title" class="form-control autoSubmit" value="{{$request->title}}"></th>
-                <th><input type="text" name="name" class="form-control autoSubmit" value="{{$request->name}}"></th>
+                <th><input type="text" name="post_type" class="form-control autoSubmit" value="{{$request->post_type}}"></th>
+                <th><input type="text" name="release_date" class="form-control autoSubmit" value="{{$request->release_date}}"></th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
-              {{-- @foreach ($movie as $item)
+              {{-- @dd($posts); --}}
+              @foreach ($posts as $item)
               <tr>
                 <td>{{$item->id}}</td>
-                <td>{{$item->name}}</td>
-                <td>{{$item->media_type}}</td>
+                <td>{{$item->title}}</td>
+                <td>{{$item->post_type}}</td>
                 <td>{{$item->release_date}}</td>
                 <td><img src="{{asset($item->landscapeimage)}}" height="100px" width="auto" alt=""></td>
                 <td><img src="{{asset($item->potraitimage)}}" height="100px" width="auto" alt=""></td>
                 <td class="btn-group btn-group-sm">
-                  <a href="{{url('/admin/media')}}/edit/{{$item->id}}" class="btn btn-success">Edit</a>
-                  <a href="{{ url('/admin/media') }}/delete/{{$item->id}}" class="btn btn-danger">Delete</a>
-                  <a href="{{ url('/media/'.$item->slug) }}" class="btn btn-primary">View</a>
+                  <a href="{{url('/admin/post')}}/edit/{{$item->id}}" class="btn btn-success">Edit</a>
+                  <a href="{{ url('/admin/post') }}/delete/{{$item->id}}" class="btn btn-danger">Delete</a>
+                  <a href="{{ url('/post/'.$item->slug) }}" class="btn btn-primary">View</a>
                 </td>
               </tr>
-              @endforeach --}}
+              @endforeach
             </tbody>
           </table>
         </div>

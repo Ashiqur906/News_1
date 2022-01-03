@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
-    public function header()
+    
+    public function index()
     {
-        // $Categoty  = Categoty2::orderBy('id', 'desc')->get();
-        $Categoty['category']    = Categoty2::all();
-        return view('frontend.layouts.header', $Categoty);
+        $posts = Post::orderBy('id', 'desc')->get();
+        return view('frontend.pages.index')->with([
+    
+            'posts' => $posts
+        ]);
     }
 }
