@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PostFV;
-use App\Models\Role;
+// use App\Models\Role;
 use App\Models\Post;
 use App\Models\Categoty2;
 use Illuminate\Http\Request;
+use File;
 
 class PostController extends Controller
 {
@@ -18,8 +19,8 @@ class PostController extends Controller
 	    if($request->id) {
 	    	$queryWhere['id'] = $request->id;
 	    }
-	    if($request->media_type) {
-	    	$queryWhere['media_type'] = $request->media_type;
+	    if($request->post_type) {
+	    	$queryWhere['post_type'] = $request->post_type;
 	    }
 	    if($request->title) {
 	    	$queryWhere[] = ['title', 'LIKE', '%'.$request->title.'%'];
@@ -36,7 +37,7 @@ class PostController extends Controller
     public function add()
     {
         $posts = Post::orderBy('id', 'desc')->get();
-        $role = Role::orderBy('sort_by', 'ASC')->get();
+        // $role = Role::orderBy('sort_by', 'ASC')->get();
         // $people = Entity::orderBy('id', 'desc')->get();
         $category = Categoty2::orderBy('id', 'desc')->get();
         $fdata = new Post();
@@ -60,13 +61,13 @@ class PostController extends Controller
         $posts = Post::orderBy('id', 'desc')->get();
         $fdata    = Post::findOrfail($id);
         $category = Categoty2::orderBy('id', 'desc')->get();
-        $role = Role::orderBy('id', 'desc')->get();
+        // $role = Role::orderBy('id', 'desc')->get();
         return view('admin.pages.post.create')->with([
             'fdata'             => $fdata,
             'category'          => $category,
             'posts'              => $posts,
-            'role'              => $role,
-            'add_by'             => $fdata->getEntitiesByRole(1),
+            // 'role'              => $role,
+            // 'add_by'             => $fdata->getEntitiesByRole(1),
         
         ]);
 
@@ -115,6 +116,7 @@ class PostController extends Controller
 
             $attributes['landscapeimage']   = $destination . '/' . $photo;
         }
+        // dd($attributes);
         try {
             if ($id) {
                 $existing = Post::findOrFail($id);
@@ -124,9 +126,9 @@ class PostController extends Controller
                     $request->casts,
                 );
                 // dd([$request->request, $entities]);
-                $existing->entity()->sync($entities);
-                $existing->categories()->sync($request->category_id);
-                $existing->tags()->sync($request->tag_id);
+                // $existing->entity()->sync($entities);
+                // $existing->categories()->sync($request->category_id);
+                // $existing->tags()->sync($request->tag_id);
                 $abledata = [
                     'data' => $request,
                     'able_id' => $id,

@@ -36,6 +36,7 @@ class PostFV extends FormRequest
             'post-details'      => 'nullable',
             'ratings'           => 'nullable',
             'release_date'      => 'nullable',
+            'parent_id'         =>'nullable',
         ];
     }
 }

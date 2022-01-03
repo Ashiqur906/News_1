@@ -30,6 +30,15 @@
         </div>
       </div>
       <div class="row border_bottom">
+        @foreach ($posts as $item)
+        <div class="col-4">
+          <div class="border_right text_content">
+            <h3>{{$item->title}}</h3>
+            <p>{{$item->description}}</p>
+            <span  class="time_span"> &#9202;৩৮ মিনিট আগে</span>
+          </div>
+        </div> 
+        @endforeach
         <div class="col-4">
           <div class="border_right text_content">
             <h3>ঢাবিতে কাল থেকে টিকাদান শুরু</h3>
@@ -136,16 +145,22 @@
         <span  class="time_span">ছবি: প্রথম আলো</span>
        </div>
        <div class="row mb-2">
-        @for($x = 1; $x <= 2; $x++)
-            @include('frontend.widgets.box_two', ['data' => [
-              'img' => 'img/33.jpg',
-              'title' => 'বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক',
-              'details' => 'বৈশ্বিক মহামারি করোনাভাইরাসের সংক্রমণ ও মৃত্যু কিছুটা কমেছে। গত একদিনে সারাবিশ্বে এ ভাইরাসে চার হাজার ৬২৫ জনের মৃত্যু হয়েছে।  আগামীকাল সকাল  কর্মসূচি শুরু'
-
-            ]])
-          @endfor
+          @foreach ($posts as $item)
+                <a href="{{route('frontend.pages.details')}}" style="text-decoration: none">
+                  <div class="row mb-2 slide_text_1">
+                          <div class="col-5">
+                              <amp-img src="{{$item->potraitimage}}" layout="responsive"  alt="{{$item->title}}" width="16" height="16"></amp-img>
+                          </div>
+                          <div class="col-7 slide_text">
+                              <h3>{{$item->title}}</h3>
+                              <p>{{$item->description}}</p>
+                          </div>
+                      {{-- </a> --}}
+                  </div>
+                </a>
+          @endforeach
         </div>
-       </div>
+      </div>
    </div>
   </div>
   <!-- main part 1 left end-->
@@ -236,13 +251,20 @@
         <div class="col-3">
           <h2 class="h_csl">সব খবর</h2>
             <div class="row mb-2 slide_text_1">
-              @for($x = 1; $x <= 5; $x++)
-                  @include('frontend.widgets.box_two', ['data' => [
-                    'img' => 'img/33.jpg',
-                    'title' => 'বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক',
-                    'details' => 'বৈশ্বিক মহামারি করোনাভাইরাসের সংক্রমণ ও মৃত্যু কিছুটা কমেছে। গত একদিনে সারাবিশ্বে এ ভাইরাসে চার হাজার ৬২৫ জনের মৃত্যু হয়েছে।  আগামীকাল সকাল  কর্মসূচি শুরু'
-                  ]])
-                @endfor
+                @foreach ($posts as $item)
+                  <a href="{{route('frontend.pages.details')}}" style="text-decoration: none">
+                    <div class="row mb-2 slide_text_1">
+                            <div class="col-5">
+                                <amp-img src="{{$item->potraitimage}}" layout="responsive"  alt="{{$item->title}}" width="16" height="16"></amp-img>
+                            </div>
+                            <div class="col-7 slide_text">
+                                <h3>{{$item->title}}</h3>
+                                <p>{{$item->description}}</p>
+                            </div>
+                        {{-- </a> --}}
+                    </div>
+                  </a>
+               @endforeach
             </div>
         </div>
       </div>
@@ -547,13 +569,20 @@
         <h2 class="h_c">সকল বিভাগ</h2>
         <div class="col-4 border_right">
           <div class="row mb-2">
-            @for($x = 1; $x <= 3; $x++)
-                @include('frontend.widgets.box_two', ['data' => [
-                  'img' => 'img/33.jpg',
-                  'title' => 'বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক',
-                  'details' => 'বৈশ্বিক মহামারি করোনাভাইরাসের সংক্রমণ ও মৃত্যু কিছুটা কমেছে। গত একদিনে সারাবিশ্বে এ ভাইরাসে চার হাজার ৬২৫ জনের মৃত্যু হয়েছে।  আগামীকাল সকাল  কর্মসূচি শুরু'
-                ]])
-            @endfor
+            @foreach ($posts as $item)
+                <a href="{{route('frontend.pages.details')}}" style="text-decoration: none">
+                  <div class="row mb-2 slide_text_1">
+                          <div class="col-5">
+                              <amp-img src="{{$item->potraitimage}}" layout="responsive"  alt="{{$item->title}}" width="16" height="16"></amp-img>
+                          </div>
+                          <div class="col-7 slide_text">
+                              <h3>{{$item->title}}</h3>
+                              <p>{{$item->description}}</p>
+                          </div>
+                      {{-- </a> --}}
+                  </div>
+                </a>
+          @endforeach
             </div>
         </div>
         <div class="col-4 border_right">
@@ -565,13 +594,20 @@
         </div>
         <div class="col-4">
           <div class="row mb-2">
-            @for($x = 1; $x <= 3; $x++)
-                @include('frontend.widgets.box_two', ['data' => [
-                  'img' => 'img/33.jpg',
-                  'title' => 'বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক',
-                  'details' => 'বৈশ্বিক মহামারি করোনাভাইরাসের সংক্রমণ ও মৃত্যু কিছুটা কমেছে। গত একদিনে সারাবিশ্বে এ ভাইরাসে চার হাজার ৬২৫ জনের মৃত্যু হয়েছে।  আগামীকাল সকাল  কর্মসূচি শুরু'
-                ]])
-              @endfor
+            @foreach ($posts as $item)
+                <a href="{{route('frontend.pages.details')}}" style="text-decoration: none">
+                  <div class="row mb-2 slide_text_1">
+                          <div class="col-5">
+                              <amp-img src="{{$item->potraitimage}}" layout="responsive"  alt="{{$item->title}}" width="16" height="16"></amp-img>
+                          </div>
+                          <div class="col-7 slide_text">
+                              <h3>{{$item->title}}</h3>
+                              <p>{{$item->description}}</p>
+                          </div>
+                      {{-- </a> --}}
+                  </div>
+                </a>
+          @endforeach
             </div>
         </div>
       </div>

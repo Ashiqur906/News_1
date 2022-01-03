@@ -65,16 +65,16 @@
                                             </div>
                                             </div>
                                             <div class="col-6">
-                                            <div class="form-group">
-                                                {{ Form::label('parent_id', 'Parent') }}
-                                                {{-- {{ Form::select('parent_id', getMediaArr(), $fdata && $fdata->media ? $fdata->media->id : null, ['class' => $errors->has('parent_id') ? 'form-control myselect2  is-invalid' : 'form-control myselect2','placeholder' => 'Select Media Type']) }} --}}
-                                                {{ Form::text('parent_id', !empty($fdata->parent_id) ? $fdata->parent_id : null, ['id' => 'parent_id', 'class' => $errors->has('parent_id') ? 'form-control is-invalid' : 'form-control','placeholder' => 'Parent']) }}
-                                                @error('parent_id')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                                @enderror
-                                            </div>
+                                                <div class="form-group">
+                                                    {{ Form::label('parent_id', 'parent_id') }}
+                                                    {{-- {{ Form::select('parent_id', getMediaArr(), $fdata && $fdata->media ? $fdata->media->id : null, ['class' => $errors->has('parent_id') ? 'form-control myselect2  is-invalid' : 'form-control myselect2','placeholder' => 'Select Media Type']) }} --}}
+                                                    {{ Form::text('parent_id', !empty($fdata->parent_id) ? $fdata->parent_id : null, ['id' => 'parent_id', 'class' => $errors->has('parent_id') ? 'form-control is-invalid' : 'form-control','placeholder' => 'Parent']) }}
+                                                    @error('parent_id')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                    @enderror
+                                                </div>
                                             </div>
                                             <div class="col-6">
                                             <div class="form-group">
@@ -299,9 +299,9 @@
             }
         }
         Vue.component('v-select', VueSelect.VueSelect);
-        let entities = {{json_encode(getPeopleArr())}};
-        let directors         =  {!! json_encode($directors) !!};
-        let role              =  {!! json_encode($role) !!};
+        // let entities = {{json_encode(getPeopleArr())}};
+        // let directors         =  {!! json_encode($directors) !!};
+        // let role              =  {!! json_encode($role) !!};
         new Vue({
             el: '#app',
             data: {

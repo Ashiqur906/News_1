@@ -21,9 +21,10 @@ use App\Http\Controllers\Category2Controller;
 
 
 Auth::routes();
-Route::get('/', function () {
-    return view('frontend.pages.index');
-});
+Route::get('/', [App\Http\Controllers\FrontendController::class, 'index'])->name('frontend.index');
+// Route::get('/', function () {
+//     return view('frontend.pages.index');
+// });
 // frontend 
 Route::get('/details', [App\Http\Controllers\DetailController::class, 'details'])->name('frontend.pages.details');
 Route::get('/category', [App\Http\Controllers\CategoryController::class, 'category'])->name('frontend.pages.category');
