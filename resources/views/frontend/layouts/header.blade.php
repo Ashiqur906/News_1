@@ -122,7 +122,7 @@
                 <span class="ajnews">আজকের সংবাদ </span>
             </div>
             <div class="col-10 marbg">
-              <marquee >
+              <marquee>
                  <a href="#" style="color:white;">⦿ বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক</a>
                  <a href="#" style="margin-left: 50px; color:white;">⦿ ঢাবিতে কাল থেকে টিকাদান শুরু</a>
                  <a href="#" style="margin-left: 50px; color:white;">⦿ সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</a>

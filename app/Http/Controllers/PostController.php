@@ -53,7 +53,7 @@ class PostController extends Controller
             // 'role'              => $role,
             // 'add_by'            => $fdata->getEntitiesByRole(1),
         ]);
-        //return view('admin.pages.movie.create', compact('category'));
+        return view('admin.pages.movie.create', compact('category'));
     }
 
     public function edit($id, Request $request)
@@ -157,9 +157,9 @@ class PostController extends Controller
                 //     $request->screenplay
                 // );
                 //dd([$request->request, $entities]);
-                $insert->entity()->sync($entities);
-                $insert->categories()->sync($request->category_id);
-                $insert->tags()->sync($request->tag_id);
+                // $insert->entity()->sync($entities);
+                // $insert->categories()->sync($request->category_id);
+                // $insert->tags()->sync($request->tag_id);
             }
             return redirect()->route('admin.pages.post.list')->with("Success", "Successfully save changed");
         } catch (\Illuminate\Database\QueryException $ex) {
