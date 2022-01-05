@@ -288,13 +288,6 @@
       <div class="row">
         <div class="col-8">
           <div class="row">
-            {{-- video widgets  --}}
-            {{-- @for($x = 1; $x <= 2; $x++)
-            @include('frontend.widgets.video_widgets', ['data' => [
-              'title' => 'বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক',
-              'video' =>'https://www.youtube.com/embed/SOK_4j69wus'
-            ]])
-            @endfor --}}
             @foreach($posts as $key=> $item)
               @if($key < 2)
                 <div class="col-6">

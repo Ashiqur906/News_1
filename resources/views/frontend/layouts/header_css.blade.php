@@ -14,6 +14,8 @@
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
     <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+    <link rel="canonical" href="https://amp.dev/documentation/examples/components/amp-autocomplete/index.html">
     <!-- Import other AMP Extensions here -->
     
     
@@ -120,6 +122,46 @@
     max-width: 1320px;
   }
 }
+
+
+
+/* mar */
+
+.wrap{
+      position: relative;
+    }
+    .ul-list{
+      list-style: none;
+      
+    }
+    .li-list{
+      display: inline-block;
+      padding: 1em 2em;
+      font-size: 1.2em;
+    }
+    .spot-anim {
+      position: absolute;
+      right: -1em;
+      transform: translateX(-100%);
+      will-change: transform;
+      animation-duration: 30s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      -webkit-animation-name: marquee;
+      -moz-animation: marquee;
+      -o-animation-name: marquee;
+      animation-name: marquee;
+    }
+
+    @keyframes marquee {
+  0% {
+  transform: translateX(100%);
+  }
+  100% {
+  transform: translateX(-150%);
+  }
+}
+    /* mar end  */
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -5917,6 +5959,7 @@
 
 
 
+
 @media (min-width: 576px){}
 @media (min-width: 768px){}
 @media (min-width: 992px){}
@@ -5928,4 +5971,4 @@
 
     <link rel="canonical" href=".">
 
-    <title>Nwes2</title>
+    <title>Prothomalo</title>
