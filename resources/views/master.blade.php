@@ -1,5 +1,5 @@
 <!doctype html>
-<html ⚡>
+<html ⚡4ads >
     <head>
         @include('frontend.layouts.header_css')
     </head>

@@ -60,7 +60,7 @@
     <div class="container">
       <div class="row">
         <div class="col-5 mt-2">
-          <div class="flex justify-start items-center ampstart-sidebar-header"
+          <div class="#"
             role="button"
             aria-label="open sidebar"
             on="tap:header-sidebar.toggle"
@@ -115,6 +115,7 @@
     </div>
   </div>
   <!-- logo part end -->
+  {{-- @include('frontend.layouts.marquee') --}}
     <div class="P_part">
       <div class="container">
          <div class="row">
@@ -122,11 +123,19 @@
                 <span class="ajnews">আজকের সংবাদ </span>
             </div>
             <div class="col-10 marbg">
-              <marquee>
+              {{-- <marquee>
                  <a href="#" style="color:white;">⦿ বিশ্বে ২৪ ঘণ্টায় ৪৬২৫ জনের মৃত্যু, সংক্রমিত তিন লক্ষাধিক</a>
                  <a href="#" style="margin-left: 50px; color:white;">⦿ ঢাবিতে কাল থেকে টিকাদান শুরু</a>
                  <a href="#" style="margin-left: 50px; color:white;">⦿ সুরেন্দ্র কুমার সিনহার বিরুদ্ধে মামলার রায় পেছাল</a>
-                </marquee>
+                </marquee> --}}
+                
+                <div id="ticker">
+                  this is a simple scrolling text!
+              </div>
+
+              {{-- <amp-script script="hello-world">
+                
+              </amp-script> --}}
             </div>
          </div>
       </div>
