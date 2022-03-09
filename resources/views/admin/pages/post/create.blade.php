@@ -102,10 +102,13 @@
                                             </div>
                                             <div class="col-6">
                                             <div class="form-group">
-                                                {{ Form::label('Categories', 'Categories') }}
-                                                {{-- {{ Form::select('category_id[]', getCategoryArr(), $fdata && $fdata->categories ? $fdata->categories->pluck('id')->toArray() : null, ['class' => $errors->has('category_id') ? 'form-control myselect2  is-invalid' : 'form-control myselect2','multiple'=>'multiple']) }} --}}
-                                                {{ Form::text('category_id', !empty($fdata->category_id) ? $fdata->category_id : null, ['id' => 'category_id', 'class' => $errors->has('category_id') ? 'form-control is-invalid' : 'form-control','placeholder' => 'Category']) }}
-                                                @error('category_id')
+                                                {{ Form::label('category', 'Categories') }}
+                                                <select>
+                                                    @foreach($category as $cat);
+                                                    <option value="{{$cat->name}}">{{$cat->name}}</option>
+                                                    @endforeach
+                                                </select>
+                                                @error('category')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
@@ -195,49 +198,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- part-7 start -->
-                                        {{-- <div class="row part-7-cs">
-                                            <div class="col-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h5>
-                                                            Moderator
-                                                            <button @click='toggle.directors = !toggle.directors' type="button" class="btn btn-primary" style="float:right;">
-                                                            <span v-if="!toggle.directors">Show</span>
-                                                            <span v-else>Hide</span>
-                                                            </button>
-                                                        </h5>
-                                                    </div>
-                                                    <div class="card-body" id="part_7" v-if="toggle.directors">
-                                                        <div class="row control-group" v-for="(input, i) in directors">
-                                                            <div class="form-group col-lg-8">
-                                                                {{ Form::label('name', 'Name') }}
-                                                            @{{i}}
-                                                            {{ Form::select(null, getPeopleArr(), $fdata && $fdata->people ? $fdata->people->pluck('name','id')->toArray() : null, ['class' => $errors->has('entity_id') ? 'form-control   is-invalid' : 'form-control ', 'placeholder' =>'Select A Name']) }}
-                                
-                                                                <div class="input-group mb-3">
-                                                                    {{ Form::select(null, getPeopleArr(), $fdata && $fdata->people ? $fdata->people->pluck('id')->toArray() : null, ['class' => $errors->has('entity_id') ? 'form-control   is-invalid' : 'form-control ', 'placeholder' =>'Select A Name', 'v-model' => 'input.entity_id', ':name' => "'directors['+ input.id +'][entity_id]'",'required' => true]) }}
-                                    
-                                                                    <div class="input-group-append">
-                                                                        <button @click="addInput(directors, input.id, 2)" class="btn btn-primary" type="button" v-if="i < 1">+Add</button>
-                                                                        <button @click="remove(directors, input.id)" class="btn btn-danger" type="button" v-else>-Remove </button>
-                                                                        @{{input.id}}
-                                                                    </div>
-                                                                </div>
-                                                                <input :name="'directors['+ input.id +'][role_id]'" type="hidden" v-model="input.role_id" :key="i+'role'"/>
-                                                                <input :name="'directors['+ input.id +'][character_name]'" type="hidden" v-model="input.character_name" :key="i+'character'"/>
-                                                                <input :name="'directors['+ input.id +'][is_new]'" type="hidden" v-model="input.is_new" :key="i+'is_new'" v-if="input.is_new"/>
-                                                                @error('entity_id')
-                                                                    <span class="invalid-feedback" role="alert">
-                                                                        <strong>{{ $message }}</strong>
-                                                                    </span>
-                                                                @enderror
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> --}}
                                         <div class="row">
 											<div class="form-group col-6">
 												{!! Form::label('potraitimage', 'Potraitimage') !!}
@@ -281,61 +241,3 @@
         </section>
     </div>
 @endsection
-{{-- @push('customjs')
-	<script>
-        jQuery(document).ready(function($) {
-            $('.myselect2').select2();
-        });
-        function ShowHide(self) {
-            let id = $(self).data('id');
-            let name = $(self).text();
-            $(self).closest('.card').find('.card-body').toggleClass('hide');
-
-            if (name == 'Show') {
-                $(self).html('Hide');
-            }
-            if (name == 'Hide') {
-                $(self).html('Show');
-            }
-        }
-        Vue.component('v-select', VueSelect.VueSelect);
-        // let entities = {{json_encode(getPeopleArr())}};
-        // let directors         =  {!! json_encode($directors) !!};
-        // let role              =  {!! json_encode($role) !!};
-        new Vue({
-            el: '#app',
-            data: {
-                inputs: [{}],
-                directors: directors,
-                role: role,
-                toggle: {'directors': true, 'role': role[0].role_id,},
-                options: []
-            },
-            methods: {
-                addInput(array, id, role_id) {
-                    let last = array.slice(-1).pop();
-                    array.push({'id': last.id+1,  'role_id': role_id, 'is_new': true});
-                },
-                remove(array, value) {
-                    //let index = array.indexOf(value);
-                    let index = array.map((el) => el.id).indexOf(value);
-                    //pos = entity_type.findIndex(x => x.id === i)
-                    if (index > -1) {
-                        //alert('Im here');
-                        array.splice(index, 1);
-                    }
-                },
-            },
-            //name to slug and make every word upper
-            mounted() {
-                var name = document.getElementById("name");
-                var slug = document.getElementById("slug");
-                name.addEventListener("change", function () {
-                    slug.value = name.value.toLowerCase().replaceAll(" ", "-");
-                    name.value = name.value.toLowerCase().split(' ').map(s => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
-                });
-            },
-
-        })
-	</script>
-@endpush --}}

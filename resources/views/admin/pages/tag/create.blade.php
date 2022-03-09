@@ -35,7 +35,6 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-    
     <!-- /.card-header -->
     <section class="content">
       <div class="container-fluid">
@@ -50,6 +49,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
+            
               {!! Form::open(['method' => 'POST', 'route' => 'tag.store', 'enctype' => 'multipart/form-data']) !!} 
               {{ Form::model($fdata, ['route' => ['admin.pages.tag.create']]) }}
                 <div class="card-body">

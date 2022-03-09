@@ -35,13 +35,14 @@ class PostController extends Controller
     }
 
     public function add()
-    {
+    {  
+    
         $posts = Post::orderBy('id', 'desc')->get();
         // $role = Role::orderBy('sort_by', 'ASC')->get();
         // $people = Entity::orderBy('id', 'desc')->get();
         $category = Categoty2::orderBy('id', 'desc')->get();
         $fdata = new Post();
-        // dd($role);
+        // dd($category);
 
         // $category = Category::orderBy('id', 'desc')->get();
         return view('admin.pages.post.create')->with([
@@ -53,7 +54,7 @@ class PostController extends Controller
             // 'role'              => $role,
             // 'add_by'            => $fdata->getEntitiesByRole(1),
         ]);
-        return view('admin.pages.movie.create', compact('category'));
+        // return view('admin.pages.movie.create', compact('category'));
     }
 
     public function edit($id, Request $request)
@@ -76,10 +77,10 @@ class PostController extends Controller
     public function store(PostFV $request)
     {
         // return $request;
-        // return $request;
         $id = $request->get('id');
         $attributes = [
             'title'                 => $request->get('title'),
+            'category'              => $request->get('category'),
             'slug'                  => $request->get('slug'),
             'description'           => $request->get('description'),
             'link'                  => $request->get('link'),

@@ -154,13 +154,13 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('admin.pages.moderator.create')}}" class="nav-link">
+                  <a href="{{ route('admin.pages.users.create')}}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Add User </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('admin.pages.moderator.list') }}" class="nav-link">
+                  <a href="{{ route('admin.pages.users.list') }}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>List Users</p>
                   </a>

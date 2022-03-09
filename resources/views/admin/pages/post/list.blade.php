@@ -50,7 +50,6 @@
               </tr>
             </thead>
             <tbody>
-              {{-- @dd($posts); --}}
               @foreach ($posts as $item)
               <tr>
                 <td>{{$item->id}}</td>

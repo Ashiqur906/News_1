@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Category2Controller;
+use App\Http\Controllers\UsersController;
+
 
 
 
@@ -64,14 +66,14 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/role/update/', [App\Http\Controllers\RoleController::class, 'update'])->name('role.update')->middleware('auth');
     Route::get('/role/delete/{id}', [App\Http\Controllers\RoleController::class, 'delete'])->middleware('auth');
 
-    // moderator 
+    // users 
 
-    Route::get('/moderator', [App\Http\Controllers\ModeratorController::class, 'index'])->name('admin.pages.moderator.list')->middleware('auth');
-    Route::get('/moderator/add', [App\Http\Controllers\ModeratorController::class, 'add'])->name('admin.pages.moderator.create')->middleware('auth');
-    Route::post('/moderator/add', [App\Http\Controllers\ModeratorController::class, 'store'])->name('moderator.store')->middleware('auth');
-    Route::get('/moderator/edit/{id}', [App\Http\Controllers\ModeratorController::class, 'edit'])->name('moderator.edit')->middleware('auth');
-    Route::post('/moderator/update/', [App\Http\Controllers\ModeratorController::class, 'update'])->name('moderator.update')->middleware('auth');
-    Route::get('/moderator/delete/{id}', [App\Http\Controllers\ModeratorController::class, 'delete'])->middleware('auth');
+    Route::get('/users', [App\Http\Controllers\UsersController::class, 'index'])->name('admin.pages.users.list')->middleware('auth');
+    Route::get('/users/add', [App\Http\Controllers\UsersController::class, 'add'])->name('admin.pages.users.create')->middleware('auth');
+    Route::post('/users/store', [App\Http\Controllers\UsersController::class, 'store'])->name('users.store')->middleware('auth');
+    Route::get('/users/edit/{id}', [App\Http\Controllers\UsersController::class, 'edit'])->name('users.edit')->middleware('auth');
+    Route::post('/users/update/', [App\Http\Controllers\UsersController::class, 'update'])->name('users.update')->middleware('auth');
+    Route::get('/users/delete/{id}', [App\Http\Controllers\UsersController::class, 'delete'])->middleware('auth');
 
     // news 
     // Route::get('/post/list', [App\Http\Controllers\PostController::class, 'postList'])->name('admin.pages.post.list')->middleware('auth');

@@ -1,4 +1,4 @@
-@extends('admin.layouts.admaster')
+@extends('admin.layout.admaster')
 @section('content')
 
   <div class="content-wrapper">
@@ -31,10 +31,10 @@
                 {{ Form::select('per_page', array_combine([5,10,20,40], [5,10,20,40]), $request->per_page, ['class' => 'form-control autoSubmit']) }}
               </div>
               <div class="w-auto mx-2">
-                <a href="{{ route('users.add') }}" class="btn btn-outline-primary">+ Add User</a>
+                <a href="{{ route('admin.pages.users.create') }}" class="btn btn-outline-primary">+ Add User</a>
               </div>
               <div class="w-auto mx-2">
-                <a href="{{ route('users.index') }}" class="btn btn-outline-secondary btn-sm mt-1"><i class="fa fa-undo"></i>Clear</a>
+                <a href="{{ route('admin.pages.users.list') }}" class="btn btn-outline-secondary btn-sm mt-1"><i class="fa fa-undo"></i>Clear</a>
               </div>
               <div class="w-auto ml-auto">
                 <h3 class="card-title">Showing {{$users->firstItem()}}-{{$users->lastItem()}} of {{$users->total()}} items.</h3>

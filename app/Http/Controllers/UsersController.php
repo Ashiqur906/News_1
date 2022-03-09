@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Requests\UsersFV;
-use App\Models\Users;
+use App\Http\Requests\ModeratorFV;
+use App\Models\Moderator;
+
 use App\Models\Role;
 use Illuminate\Http\Request;
 
@@ -24,34 +25,22 @@ class UsersController extends Controller
 	    if($request->per_page) {
 	    	$per_page = $request->per_page;
 	    }
-        // $Users = Entity::orderBy('id', 'desc')->paginate(5);
-        $Users = Users::where($queryWhere)->paginate($per_page);
-        return view('admin.pages.users.list', compact('Users','request'));
+        $users = Moderator::where($queryWhere)->paginate($per_page);
+        return view('admin.pages.users.list', compact('users','request'));
     }
 
     public function add()
     {
-        $role   = Role::orderBy('id', 'desc')->get();
-        $Users = Users::orderBy('id', 'desc')->get();
         
         return view('admin.pages.users.create')->with([
-            'role'   => $role,
-            'users' => $Users,
-            'fdata'  => new Users(),
+           
+            
+            'fdata'  => new Moderator(),
             'mdata'  => null
         ]); 
+
     }
-    public function teamAdd()
-    {
-        $role   = Role::orderBy('id', 'desc')->get();
-        $Users = Users::orderBy('id', 'desc')->get();
-        return view('admin.pages.users.add')->with([ 
-            'role'   => $role,
-            'users' => $users,
-            'fdata'  => new Users(),
-            'mdata'  => null
-        ]);
-    }
+    
     public function edit(Request $request, $id)
     {  
 
@@ -60,16 +49,17 @@ class UsersController extends Controller
             return redirect()->back()->withErrors('No Profile id found');
         }
 
-        $fdata = Users::findOrfail($id);
+        $fdata = Moderator::findOrfail($id);
 
         return view('admin.pages.users.create')->with([
             'fdata' => $fdata,
             'mdata' => null
         ]);
     }
-    public function store(UsersFV $request)
+    public function store(Request $request)
     {  
-        // return $request;
+        // ModeratorFV
+        // dd($request->all());
         //  dd($request->hasFile('image'));git 
         $id = $request->get('id');
      
@@ -94,7 +84,7 @@ class UsersController extends Controller
        
         try {
             if ($id) {
-                $existing = Users::findOrFail($id);
+                $existing = Moderator::findOrFail($id);
                 if ($request->hasFile('image')) {
                     if (File::exists($existing->image)) {
                         File::delete($existing->image);
@@ -108,14 +98,13 @@ class UsersController extends Controller
                 }
              
              
-                $sumbit =  Users::where('id', $id)->update($attributes);
+                $sumbit =  Moderator::where('id', $id)->update($attributes);
                 $existing->roles()->sync($request->role_id);
                 $abledata = [
                     'data'      => $request,
                     'able_id'   => $id,
-                    'able_type' => Users::class,
+                    'able_type' => Moderator::class,
                 ];
-                $this->seoPost($abledata);
             } else {
 
                 if ($request->hasFile('image')) {
@@ -125,16 +114,15 @@ class UsersController extends Controller
                     $attributes['image']    = $destination . '/' . $photo;
                  
                 }
-                $insert = Users::create($attributes);
-                $insert->roles()->sync($request->role_id);
+                $insert = Moderator::create($attributes);
+                // $insert->roles()->sync($request->role_id);
                 $abledata = [
                     'data'      => $request,
                     'able_id'   => $insert->id,
-                    'able_type' => Users::class,
+                    'able_type' => Moderator::class,
                 ];
-                $this->seoPost($abledata);
             }
-            return redirect()->route('users.index')->with("Success", "Successfully save changed");
+            return redirect()->route('admin.pages.users.list');
         } catch (\Illuminate\Database\QueryException $ex) {
 
             return redirect()->back()->withErrors($ex->getMessage())
@@ -144,7 +132,7 @@ class UsersController extends Controller
     
     public function delete($id)
     {
-        $users = Users::find($id);
+        $users = Moderator::find($id);
         if (!is_null($Users)) {
             //Delete Image
             if (File::exists($users->image)) {

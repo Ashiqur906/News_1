@@ -48,7 +48,7 @@ class CreatePostsTable extends Migration
 
             $table->foreign('created_by')->references('id')->on('users');
             $table->foreign('modified_by')->references('id')->on('users');
-            $table->foreign('parent_id')->references('id')->on('post')->onDelete('cascade');
+            // $table->foreign('parent_id')->references('id')->on('post')->onDelete('cascade');
         });
     }
 

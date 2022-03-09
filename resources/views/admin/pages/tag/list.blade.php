@@ -16,7 +16,7 @@
                 {{ Form::select('per_page', array_combine([5,10,20,40], [5,10,20,40]), $request->per_page, ['class' => 'form-control autoSubmit']) }}
               </div>
               <div class="w-auto mx-2">
-                <a href="{{ route('admin.pages.tag.create') }}" class="btn btn-outline-primary">+ Add Category</a>
+                <a href="{{ route('admin.pages.tag.create') }}" class="btn btn-outline-primary">+ Add Tag</a>
               </div>
               <div class="w-auto mx-2">
                 <a href="{{ route('admin.pages.tag.list') }}" class="btn btn-outline-secondary btn-sm mt-1"><i class="fa fa-undo"></i>Clear</a>

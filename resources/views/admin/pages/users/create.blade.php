@@ -1,46 +1,14 @@
-@extends('admin.layouts.admaster')
-
+@extends('admin.layout.admaster')
 @section('content')
-  @if (count($errors) > 0)
-    <div class="alert alert-danger">
-      <strong>Whoops!</strong> There were some problems with your input.<br><br>
-      <ul>
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-      </ul>
-    </div>
-  @endif
-
-  @if(session('success'))
-    <div class="alert alert-success">
-      {{ session('success') }}
-    </div> 
-  @endif
-
-  <div class="content-wrapper">
-    {{-- !-- Content Header (Page header) --> --}}
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Profile</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-              <li class="breadcrumb-item active">Profile</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div> <!-- /.container-fluid -->
-    </div>
-    {{-- @dd($fdata) --}}
-    <!-- /.content-header -->
-    @if(Session::has('myexcep'))
-      @dump(Session::get('myexcep'));
-    @endif
-    <!-- /.card-header -->
+<div class="content-wrapper">
+      <div class="card-header">
+        <h3 class="card-title">Users List</h3>
+      </div>
+          <!-- Main content -->
+    {{-- @if(Session::has('myexcep'))
+        @dump(Session::get('myexcep'));
+    @endif --}}
+      <!-- /.card-header -->
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
@@ -76,16 +44,6 @@
                         </span>
                     @enderror  
                   </div>
-                  <div class="form-group">
-                    {{ Form::label('role', 'Roles') }}
-                    {{ Form::select('role_id[]', getRoleArr(), $fdata && $fdata->roles ? $fdata->roles->pluck('id')->toArray() : null, ['class' => $errors->has('people_id') ? 'form-control myselect2  is-invalid' : 'form-control myselect2', 'multiple' => 'multiple']) }}
-                    @error('role_id')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span> 
-                    @enderror
-                  </div>
-
                   <div class="form-group">
                     {!! Form::label('image', 'Image') !!}
                     @isset($fdata->image)
@@ -193,38 +151,11 @@
               </div>
               <!-- /.card -->
             </div>
-          
-{{-- 
-          <div class="col-md-3">
-            @include('admin.pages.seo.seo', ['sdata' => ($fdata && $fdata->seo)?$fdata->seo:null])
-          </div> --}}
         </div>   
         {{ Form::close() }}
       </div>
     </section>
     <!-- form start -->    
   </div>
-    @push('customjs')
-        <script type="text/javascript">
-
-        jQuery(document).ready(function($) {
-            $('.myselect2').select2();
-            });
-
-        new Vue({
-            el: '#app',
-            //name to slug and make every word upper
-            mounted() {
-            var name = document.getElementById("name");
-            var slug = document.getElementById("slug");
-            name.addEventListener("change", function () {
-                slug.value = name.value.toLowerCase().replaceAll(" ", "-");
-                name.value = name.value.toLowerCase().split(' ').map(s => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
-            });
-            },
-            
-        })
-        </script>
-
-    @endpush
-@endsection
+  @endsection
+   

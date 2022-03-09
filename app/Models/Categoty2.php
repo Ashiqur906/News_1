@@ -11,4 +11,11 @@ class Categoty2 extends Model
     protected $table = 'categoty2s';
     protected $fillable = [
         'name', 'slug',];
+
+
+    // public function post()
+    // {
+    //     // return $this->hasMany(Media::class);
+    //     return $this->belongsToMany(post::class, 'category');
+    // }
 }
